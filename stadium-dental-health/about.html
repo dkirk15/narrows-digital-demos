@@ -4,54 +4,65 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Stadium Dental Health Preview</title>
-  <meta name="description" content="Stadium Dental Health — modern patient booking preview by Narrows Digital. Not affiliated with the practice." />
+  <meta name="description" content="About Stadium Dental Health in Tacoma’s Stadium District — booking preview by Narrows Digital." />
   <meta name="robots" content="noindex,nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../shared/shared.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="stadium.css" />
 </head>
-<body class="theme-stadium">
+<body>
   <div class="topbar">
-    <div class="container"><span>Tacoma · Stadium District</span>
-      <span><a href="tel:2533834901">(253) 383-4901</a> · 2 N Tacoma Ave</span></div>
+    <div class="container">
+      <span>Stadium District · 2 N Tacoma Ave</span>
+      <span><a href="tel:2533834901">(253) 383-4901</a></span>
+    </div>
   </div>
   <header class="site-header">
     <div class="container nav-row">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">SD</span>
-        <span class="brand-text"><strong>Stadium Dental Health</strong><span>Tacoma family dentistry preview</span></span>
+        <span class="brand-mark" aria-hidden="true">N/S</span>
+        <span class="brand-text">
+          <strong>Stadium Dental</strong>
+          <span>Stadium District · Tacoma</span>
+        </span>
       </a>
       <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
       <ul class="nav-links" id="site-nav" data-nav-links>
         <li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="about.html" aria-current="page">About</a></li>
-<li><a href="contact.html" class="nav-cta btn btn-primary">Book appointment</a></li>
-
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html" class="nav-cta btn btn-primary">Book</a></li>
       </ul>
     </div>
   </header>
+
   <main>
+    <div class="page-intro">
+      <div class="container">
+        <h1>About the practice</h1>
+        <p>A short note on who we are — based only on public materials.</p>
+      </div>
+    </div>
 
     <section class="section">
-      <div class="container grid-2">
-        <div>
-          <h1>About the practice</h1>
-          <p>Stadium Dental Health in Tacoma, Washington, provides professional oral care and dental services for the entire family. From pediatric dentistry to cosmetic dentistry, the office aims to handle dental needs in a timely, efficient manner.</p>
-          <p>Public materials highlight comfort and care: doctors and staff are concerned not only with dental health but also with offering a comfortable environment, with an emphasis on pain-free dentistry.</p>
-          <p class="note blue">ADA/OSHA cleanliness and kid-friendly amenities are referenced in public scout notes for this practice. Confirm current policies with the office.</p>
-        </div>
-        <div class="card stack">
-          <h2>Team</h2>
-          <p>The practice maintains a Meet the Doctors page on its website. Doctor names and bios could not be verified for this preview because the live site often returns 403 / flaky responses to automated fetches.</p>
-          <p><strong>Honest preview note:</strong> we do not invent clinician names. Please call the office to learn about the current team and to schedule.</p>
-          <a class="btn btn-primary" href="tel:2533834901">Call (253) 383-4901</a>
-        </div>
+      <div class="container">
+        <article class="about-letter">
+          <p class="lede">Stadium Dental Health sits at <strong>2 N Tacoma Ave</strong> in Tacoma’s Stadium District. Public materials describe a family practice that handles oral care from pediatric dentistry through cosmetic care, with an emphasis on comfort and pain-free dentistry.</p>
+          <p>Doctors and staff are described as concerned not only with dental health, but with offering a comfortable environment for patients of all ages. Serving greater Tacoma families is part of that public story.</p>
+          <p>ADA/OSHA cleanliness and kid-friendly amenities appear in public scout notes for this practice. Please confirm current policies directly with the office.</p>
+          <div class="note alert">
+            <strong>Honest preview note:</strong> Doctor names and bios could not be recovered for this demo — the live site often returns 403 / flaky responses to automated fetches. We do not invent clinicians. Call the office to learn about the current team and to schedule.
+          </div>
+          <div class="phone-cta">
+            <p style="margin-bottom:0.85rem;">Questions about the team or your visit?</p>
+            <a class="btn btn-primary" href="tel:2533834901">Call (253) 383-4901</a>
+          </div>
+        </article>
       </div>
     </section>
-
   </main>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -76,6 +87,6 @@
       <p class="preview-banner">Preview by Narrows Digital — not affiliated with the practice.</p>
     </div>
   </footer>
-  <script src="../shared/shared.js"></script>
+  <script src="stadium.js"></script>
 </body>
 </html>
