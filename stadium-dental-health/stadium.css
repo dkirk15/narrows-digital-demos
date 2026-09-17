@@ -713,21 +713,26 @@ textarea { min-height: 110px; resize: vertical; }
     position: relative;
     inset: auto;
     align-self: stretch;
-    width: 100%;
-    max-width: none;
-    /* Avoid aspect-ratio + max-height shrinking width (cream gutter on the right) */
+    /* True full-bleed: break out of any ancestor padding; kill cream right gutter */
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     aspect-ratio: auto;
     height: clamp(220px, 58vw, 320px);
     min-height: 220px;
     overflow: hidden;
+    background: #e8e2d6; /* not page cream if image lags */
   }
   .place-hero--illustrated .place-hero__media img {
     display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    min-width: 100%;
     height: 100%;
+    max-width: none;
     object-fit: cover;
-    object-position: center center; /* full-bleed centered crop */
+    object-position: center center; /* centered crop */
   }
   .place-hero--illustrated .place-hero__overlay {
     display: none;
