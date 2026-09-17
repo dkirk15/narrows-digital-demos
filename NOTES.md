@@ -1,6 +1,7 @@
 # NOTES — what changed vs old
 
 ## Stadium Dental Health
+- **Mobile center (2026-09-17):** Full-bleed centered hero crop on small screens (no cream right gutter from aspect-ratio shrink). Desktop unchanged.
 - **Mobile stack (2026-09-17):** Illustrated hero on small screens is art full-width first, then cream copy block below (no text overlay on the map). Desktop cream plate overlay unchanged.
 - **Hero contrast fix (2026-09-16):** Cream/paper type plate behind `.place-hero__content` on illustrated; overlay none; desktop object-position 62% center. Keeps v4 map art + ink type.
 - **Hero v4 illustrated (2026-09-16):** Lens map-style art live with `.place-hero--illustrated` (ink/navy type on cream, ≤~18% left navy overlay, mobile object-position 60% center). Photoreal v2 archived under `stadium-dental-health/assets/archive/`.
