@@ -1,6 +1,7 @@
 # NOTES — what changed vs old
 
 ## Stadium Dental Health
+- **Hero v4 illustrated (2026-09-16):** Lens map-style art live with `.place-hero--illustrated` (ink/navy type on cream, ≤~18% left navy overlay, mobile object-position 60% center). Photoreal v2 archived under `stadium-dental-health/assets/archive/`.
 - **Hero v2 (2026-09-16):** Lens `hero-stadium-district-16x9-v2.png` with CSS-only left-weighted navy gradient (not baked into PNG). Mobile `object-position: 35% center`. v1 Unsplash placeholder archived under `stadium-dental-health/assets/archive/`. AI/placeholder caption retained.
 - **Old fail:** Blue/teal token swap on shared template — same Fraunces + DM Sans, twin hero + card grid, “Narrows Digital preview” eyebrow, gradient “SD” mark; looked like a cousin of Down to Earth / Parkland.
 - **Rebuild (Palette brief, 2026-09-16 PT):** Stadium-only `stadium.css` + `stadium.js` — no shared.css restyle that would affect other demos.

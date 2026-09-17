@@ -288,6 +288,47 @@ p { margin: 0 0 1rem; color: var(--muted); }
   color: rgba(255,255,255,0.55);
 }
 
+/* Illustrated map-style hero (v4) — ink on cream, light/no overlay */
+.place-hero--illustrated {
+  background: #f3efe6;
+  color: #101418;
+}
+.place-hero--illustrated .place-hero__media img {
+  object-position: 55% center; /* landmark cluster in frame; left cream for type */
+}
+.place-hero--illustrated .place-hero__overlay {
+  /* max ~20% left navy — do NOT use photoreal 65%+ gradient */
+  background: linear-gradient(
+    90deg,
+    rgba(12, 22, 36, 0.18) 0%,
+    rgba(12, 22, 36, 0.08) 28%,
+    rgba(12, 22, 36, 0.00) 52%
+  );
+}
+.place-hero--illustrated .place-hero__content {
+  max-width: min(42%, 30rem);
+}
+.place-hero--illustrated h1 {
+  color: #0c1624;
+}
+.place-hero--illustrated .lead {
+  color: #3a424c;
+}
+.place-hero--illustrated .photo-credit {
+  color: rgba(16, 20, 24, 0.55);
+}
+.place-hero--illustrated .btn-ghost {
+  color: #101418;
+  border-color: #101418;
+}
+.place-hero--illustrated .btn-ghost:hover {
+  background: rgba(16, 20, 24, 0.06);
+  color: #101418;
+}
+.place-hero--illustrated .text-link {
+  color: var(--brick);
+}
+
 /* Comfort promise band */
 .promise-band {
   background: var(--surface);
@@ -640,9 +681,13 @@ textarea { min-height: 110px; resize: vertical; }
   .site-header { position: sticky; }
   .nav-row { position: relative; flex-wrap: wrap; }
   .place-hero__media img {
-    object-position: 35% center; /* dark street/facades under type; chateau toward right */
+    object-position: 35% center; /* photoreal: dark street/facades under type */
   }
-  .place-hero__content {
+  .place-hero--illustrated .place-hero__media img {
+    object-position: 60% center; /* protect Stadium High + Rainier; left cream grows */
+  }
+  .place-hero__content,
+  .place-hero--illustrated .place-hero__content {
     max-width: 100%;
   }
 }
