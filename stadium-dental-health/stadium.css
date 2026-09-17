@@ -709,20 +709,21 @@ textarea { min-height: 110px; resize: vertical; }
     overflow: visible;
     width: 100%;
   }
+  .place-hero--illustrated {
+    overflow: hidden; /* clip media hard to section edges */
+  }
   .place-hero--illustrated .place-hero__media {
     position: relative;
     inset: auto;
     align-self: stretch;
-    /* True full-bleed: break out of any ancestor padding; kill cream right gutter */
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: 100%;
+    max-width: none;
+    margin: 0;
     aspect-ratio: auto;
     height: clamp(220px, 58vw, 320px);
     min-height: 220px;
     overflow: hidden;
-    background: #e8e2d6; /* not page cream if image lags */
+    background: #ddd6c8;
   }
   .place-hero--illustrated .place-hero__media img {
     display: block;
@@ -732,7 +733,8 @@ textarea { min-height: 110px; resize: vertical; }
     height: 100%;
     max-width: none;
     object-fit: cover;
-    object-position: center center; /* centered crop */
+    /* Crop away map art empty left cream; center Stadium High + Rainier in frame */
+    object-position: 72% center;
   }
   .place-hero--illustrated .place-hero__overlay {
     display: none;
