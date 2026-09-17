@@ -696,17 +696,55 @@ textarea { min-height: 110px; resize: vertical; }
   .place-hero__media img {
     object-position: 35% center; /* photoreal: dark street/facades under type */
   }
-  .place-hero--illustrated .place-hero__media img {
-    object-position: 60% center; /* protect Stadium High + Rainier; left cream grows */
-  }
   .place-hero__content {
     max-width: 100%;
   }
+
+  /* Illustrated: mobile stack — art full-width first, cream copy below (no text on art) */
+  .place-hero--illustrated {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    overflow: visible;
+  }
+  .place-hero--illustrated .place-hero__media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    min-height: 220px;
+    max-height: 320px;
+  }
+  .place-hero--illustrated .place-hero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 55% center; /* Stadium High + Rainier readable */
+  }
+  .place-hero--illustrated .place-hero__overlay {
+    display: none;
+  }
   .place-hero--illustrated .place-hero__content {
-    max-width: 100%;
-    width: min(100% - 1.5rem, var(--max));
-    margin: 1.25rem auto 1.5rem;
-    padding: 1.4rem 1.2rem 1.25rem;
-    background: #fffbf7; /* reinforce opaque plate on small screens */
+    position: relative;
+    z-index: 1;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid rgba(16, 20, 24, 0.08);
+    box-shadow: none;
+    padding: 1.5rem 1.25rem 1.75rem;
+    background: #fffbf7;
+  }
+  .place-hero--illustrated .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .place-hero--illustrated .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
