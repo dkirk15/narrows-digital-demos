@@ -303,11 +303,12 @@ p { margin: 0 0 1rem; color: var(--muted); }
 }
 .place-hero--illustrated .place-hero__content {
   max-width: min(44%, 32rem);
-  /* Cream type plate — preferred fix for desktop AA over building/trees */
-  background: rgba(255, 251, 247, 0.94);
+  /* Solid cream type plate — opaque so lead/ghost CTA AA-pass on desktop + mobile */
+  background: #fffbf7;
+  border: 1px solid rgba(16, 20, 24, 0.08);
   padding: 1.75rem 1.6rem 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 10px 28px rgba(16, 20, 24, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(16, 20, 24, 0.12);
   margin: 2.5rem 0 2.25rem;
 }
 .place-hero--illustrated h1 {
@@ -703,7 +704,9 @@ textarea { min-height: 110px; resize: vertical; }
   }
   .place-hero--illustrated .place-hero__content {
     max-width: 100%;
-    margin: 1.5rem 0 1.75rem;
-    padding: 1.35rem 1.15rem 1.2rem;
+    width: min(100% - 1.5rem, var(--max));
+    margin: 1.25rem auto 1.5rem;
+    padding: 1.4rem 1.2rem 1.25rem;
+    background: #fffbf7; /* reinforce opaque plate on small screens */
   }
 }
