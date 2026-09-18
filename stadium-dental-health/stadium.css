@@ -734,7 +734,7 @@ textarea { min-height: 110px; resize: vertical; }
     max-width: none;
     object-fit: cover;
     /* Crop away map art empty left cream; center Stadium High + Rainier in frame */
-    object-position: 82% center; /* crop map empty-left cream; landmarks fill mobile band */
+    object-position: 50% center; /* David: nudge crop left from 82% */
   }
   .place-hero--illustrated .place-hero__overlay {
     display: none;
