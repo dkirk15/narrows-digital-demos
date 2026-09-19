@@ -45,3 +45,19 @@
 ## Shared product rules (all demos)
 - Footer exactly: `Preview by Narrows Digital — not affiliated with the practice.`
 - No outreach, no spend, no PHI storage, no HIPAA claims, no pricing tables.
+
+## Puyallup Family Dentistry (2026-09-19 PT)
+- **Old:** Public site at puyallupfamilydentist.com (Wix-style) — call/visit oriented; no productized online booking form; paired public site puyallupfamilydental.com shares the same South Hill roster and address. Scout context noted weak TLS/booking productization on related Puyallup listings historically; this demo targets the live 5620 practice.
+- **Demo:** Practice-unique `meridian.css` + `meridian.js` — **not** shared/shared.css twin, **not** Stadium brick/navy twin, **not** Simpson harbor teal twin.
+- **Type:** Cormorant Garamond (display) + Karla (UI) — distinct from Stadium Barlow Condensed + Source Sans 3, Simpson Literata + Outfit, and Fraunces/DM Sans shared template.
+- **Color:** Deep evergreen (#1a3a2f), warm wheat paper (#f4ead8), fair amber accent (#c4832a), soft valley sky (#dce8ef), near-black ink (#1c1917). Primary CTAs evergreen or amber.
+- **Hero:** Split layout — solid wheat type plate + CSS valley/foothills place art (South Hill cue). Mobile: art first, then copy stack (AA contrast; no text on art).
+- **Brand:** Geometric “PF” monogram + wordmark **Puyallup Family Dentistry** — not a dentist’s personal name as site brand; not gradient initial square.
+- **Home silhouette:** Place hero → promise band → service chips → hours + OSM map → CTA band.
+- **Location:** 5620 112th St E, Ste 250, Puyallup, WA 98373 · (253) 770-0529 · puyallupfamilydental@live.com.
+- **Hours (public):** Mon 8am–6pm; Tue–Thu 8am–5pm; Fri 7am–2pm; Sat–Sun closed.
+- **Doctors (public Meet Our Dentists summaries only):** Christopher Carlson, D.D.S.; Jonathan Walker, D.M.D.; Nicole Ters, D.D.S. — no invented bios.
+- **Services (public only):** Children/teens/adults; Invisalign; preferred provider for most insurance (no invented plan list); same-day emergencies; high-quality affordable dentistry; financial arrangements (no dollar amounts); since 2011; accepting new patients.
+- **Contact:** Client-side form (name, phone, email, preferred time, message); success local only; no PHI backend.
+- **Kept:** Exact footer banner; no pricing tables; no HIPAA claims; no outreach; not on their domain.
+- **Not used:** Kai A. Maulding / 604 S Meridian / (253) 845-7911 — different practice listing; omitted entirely.
