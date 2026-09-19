@@ -262,23 +262,6 @@ p { margin: 0 0 1rem; color: var(--muted); }
   object-fit: cover;
   object-position: 62% center; /* desktop: harbor cluster; mist near copy seam */
 }
-.harbor-hero__caption {
-  position: absolute;
-  bottom: 0.75rem;
-  left: 0.75rem;
-  right: 0.75rem;
-  margin: 0;
-  font-size: 0.68rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: rgba(10, 46, 54, 0.7);
-  background: rgba(255, 252, 247, 0.82);
-  padding: 0.35rem 0.5rem;
-  border-radius: 4px;
-  text-align: left;
-  z-index: 1;
-  max-width: 22rem;
-}
 
 .promise-band {
   background: var(--harbor);
@@ -688,4 +671,12 @@ textarea { min-height: 110px; resize: vertical; }
   .harbor-hero__img {
     object-position: 65% 55%;
   }
+}
+
+.asset-note {
+  margin: 0.35rem 0 0;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: rgba(184, 212, 206, 0.55);
 }
