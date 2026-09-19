@@ -46,7 +46,9 @@
 - Footer exactly: `Preview by Narrows Digital — not affiliated with the practice.`
 - No outreach, no spend, no PHI storage, no HIPAA claims, no pricing tables.
 
-## Puyallup Family Dentistry (2026-09-19 PT)
+## Puyallup Family Dentistry
+- **Hero v2 (2026-09-19):** Lens fairgrounds `hero-puyallup-16x9-v2` in `.valley-hero__art` (cover; desktop 58% center; mobile 50% center, ≥240px). CSS valley layers removed. Cream plate `#FAF6EE`. No on-image disclaimer; footer asset note only.
+ (2026-09-19 PT)
 - **Old:** Public site at puyallupfamilydentist.com (Wix-style) — call/visit oriented; no productized online booking form; paired public site puyallupfamilydental.com shares the same South Hill roster and address. Scout context noted weak TLS/booking productization on related Puyallup listings historically; this demo targets the live 5620 practice.
 - **Demo:** Practice-unique `meridian.css` + `meridian.js` — **not** shared/shared.css twin, **not** Stadium brick/navy twin, **not** Simpson harbor teal twin.
 - **Type:** Cormorant Garamond (display) + Karla (UI) — distinct from Stadium Barlow Condensed + Source Sans 3, Simpson Literata + Outfit, and Fraunces/DM Sans shared template.

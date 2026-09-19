@@ -244,7 +244,7 @@ p { margin: 0 0 1rem; color: var(--muted); }
   margin-top: 1.35rem;
 }
 
-/* Split place hero — solid type plate + CSS valley/foothills art */
+/* Split place hero — cream/wheat type plate + Lens fairgrounds art */
 .valley-hero {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -255,9 +255,12 @@ p { margin: 0 0 1rem; color: var(--muted); }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(1.75rem, 4vw, 3.25rem) clamp(1.25rem, 3.5vw, 3rem);
-  background: var(--wheat);
+  padding: clamp(1.35rem, 3.5vw, 1.6rem) clamp(1.35rem, 3.5vw, 1.6rem);
+  background: #faf6ee;
   border-right: 1px solid var(--line);
+  border-radius: 0 10px 10px 0;
+  margin: 0.75rem 0 0.75rem 0.75rem;
+  box-shadow: 0 1px 0 rgba(28, 25, 23, 0.04);
 }
 .valley-hero__kicker {
   font-size: 0.8rem;
@@ -275,67 +278,19 @@ p { margin: 0 0 1rem; color: var(--muted); }
   margin-bottom: 0;
 }
 
-/* CSS place art — valley foothills + Meridian/South Hill cue */
+/* Lens fairgrounds hero — image fill, no on-art caption / wash */
 .valley-hero__art {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(180deg, #a8c4d4 0%, var(--sky) 38%, #c5d4c0 62%, #8a9e78 100%);
+  background: #f3ead6;
   min-height: 280px;
 }
-.valley-hero__art::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 40% at 70% 18%, rgba(255, 252, 245, 0.55), transparent 60%),
-    linear-gradient(115deg, transparent 40%, rgba(26, 58, 47, 0.08) 100%);
-  z-index: 1;
-}
-.valley-layer {
-  position: absolute;
-  left: -5%;
-  right: -5%;
-  bottom: 0;
-  z-index: 2;
-}
-.valley-layer--far {
-  height: 52%;
-  background: linear-gradient(180deg, #5a7a6a 0%, #3d5a4c 100%);
-  clip-path: polygon(0% 55%, 12% 38%, 28% 48%, 42% 22%, 58% 40%, 72% 18%, 88% 35%, 100% 28%, 100% 100%, 0% 100%);
-  opacity: 0.85;
-}
-.valley-layer--mid {
-  height: 42%;
-  background: linear-gradient(180deg, #2f4f40 0%, var(--evergreen) 100%);
-  clip-path: polygon(0% 48%, 18% 28%, 35% 42%, 50% 20%, 68% 38%, 82% 24%, 100% 40%, 100% 100%, 0% 100%);
-}
-.valley-layer--near {
-  height: 28%;
-  background: linear-gradient(180deg, var(--evergreen-deep) 0%, #0e1f18 100%);
-  clip-path: polygon(0% 60%, 22% 35%, 45% 55%, 65% 30%, 85% 48%, 100% 38%, 100% 100%, 0% 100%);
-}
-.valley-road {
-  position: absolute;
-  bottom: 8%;
-  left: 42%;
-  width: 16%;
-  height: 22%;
-  background: linear-gradient(180deg, rgba(244, 234, 216, 0.35), rgba(196, 131, 42, 0.25));
-  clip-path: polygon(38% 0%, 62% 0%, 100% 100%, 0% 100%);
-  z-index: 3;
-}
-.valley-label {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  z-index: 4;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(244, 234, 216, 0.85);
-  margin: 0;
+.valley-hero__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% center; /* desktop: favor fairgrounds cluster */
 }
 
 .promise-band {
@@ -662,10 +617,19 @@ textarea { min-height: 110px; resize: vertical; }
     min-height: 0;
   }
   /* Mobile: art first, then copy stack — no unreadable text on art */
-  .valley-hero__art { order: -1; min-height: 240px; }
+  .valley-hero__art {
+    order: -1;
+    min-height: 240px;
+    height: clamp(220px, 56vw, 300px);
+  }
+  .valley-hero__img {
+    object-position: 50% center;
+  }
   .valley-hero__copy {
     border-right: 0;
     border-top: 1px solid var(--line);
+    border-radius: 10px;
+    margin: 0 0.75rem 0.75rem;
   }
   .promise-grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .visit-grid,
@@ -694,5 +658,19 @@ textarea { min-height: 110px; resize: vertical; }
 
 @media (max-width: 480px) {
   .brand-text span { display: none; }
-  .valley-hero__art { min-height: 200px; }
+  .valley-hero__art {
+    min-height: 240px;
+    height: clamp(220px, 58vw, 300px);
+  }
+  .valley-hero__img {
+    object-position: 50% center;
+  }
+}
+
+.asset-note {
+  margin: 0.35rem 0 0;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: rgba(244, 234, 216, 0.5);
 }
