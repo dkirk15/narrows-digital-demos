@@ -637,11 +637,12 @@ textarea { min-height: 110px; resize: vertical; }
   /* Mobile: art first, then solid type plate — AA contrast, no overlay */
   .harbor-hero__art {
     order: -1;
-    min-height: 220px;
-    height: clamp(200px, 52vw, 280px);
+    min-height: 240px;
+    height: clamp(220px, 56vw, 300px);
   }
   .harbor-hero__img {
-    object-position: center 40%;
+    /* Bias to boats/town/hills (right-center); avoid left mist */
+    object-position: 65% 55%;
   }
   .harbor-hero__copy {
     border-right: 0;
@@ -679,5 +680,12 @@ textarea { min-height: 110px; resize: vertical; }
 
 @media (max-width: 480px) {
   .brand-text span { display: none; }
-  .harbor-hero__art { min-height: 160px; }
+  /* Keep art tall enough that boats/hills read — do not shrink below mobile stack */
+  .harbor-hero__art {
+    min-height: 240px;
+    height: clamp(220px, 58vw, 300px);
+  }
+  .harbor-hero__img {
+    object-position: 65% 55%;
+  }
 }
