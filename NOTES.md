@@ -29,6 +29,19 @@
 - **Location:** Includes public move notice to 12001 Pacific Avenue (Centennial Building) and current public contact details.
 - **Note:** Untouched in Stadium rebuild (2026-09-16).
 
-## Shared product rules (all three)
+## Simpson & Coyner Family Dentistry (2026-09-19 PT)
+- **Old:** Squarespace at rcoynerdds.com — call-only booking (“Call For an Appointment”), no bookable form; SMS privacy walls on contact; About page URL 404.
+- **Demo:** Practice-unique `harbor.css` + `harbor.js` — **not** shared/shared.css twin, **not** Stadium brick/navy twin.
+- **Type:** Literata (display) + Outfit (UI) — harbor-calm serif/sans; distinct from Stadium Barlow Condensed + Source Sans 3 and from Fraunces/DM Sans shared template.
+- **Color:** Deep harbor teal/ink, seafoam, soft fog gray, warm sand paper; copper accent sparingly. Not Stadium brick/navy; not Parkland medical blue.
+- **Hero:** Split layout — solid type plate with place kicker (“Gig Harbor · Pioneer Way”) + soft CSS watercolor/fog harbor band. Mobile stacks art then copy (AA contrast). No photo-overlay cream plate twin; no “Narrows Digital preview” hero eyebrow.
+- **Brand:** Circular “S&C” monogram + “Simpson & Coyner” wordmark — not gradient initial square.
+- **Home silhouette:** Harbor split hero → deep promise band → service chips → public review quote → hours + OSM map → CTA band.
+- **Doctors:** Richard Coyner, DDS & Hunter Simpson, DDS named from public site; no invented bios (About 404 noted honestly).
+- **Services:** Public list only — exams/cleanings, sealants, periodontal, fillings, same-day crowns, partials/dentures, implants, cosmetic (veneers/whitening), night/sport guards, emergency; tech notes (digital radiography, intraoral cameras, soft tissue laser, CAD-CAM).
+- **Contact:** Address, phone, fax, public hours (Mon–Wed 8–5, Thu 7–3, Fri–Sun closed), Visa/MC/Amex; client-side form (name, phone, email, preferred time, message); no SMS marketing privacy walls; no pricing/discount lines.
+- **Kept:** Exact footer; no PHI backend; no HIPAA claims; no outreach; not on their domain.
+
+## Shared product rules (all demos)
 - Footer exactly: `Preview by Narrows Digital — not affiliated with the practice.`
 - No outreach, no spend, no PHI storage, no HIPAA claims, no pricing tables.
