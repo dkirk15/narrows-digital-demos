@@ -249,61 +249,35 @@ p { margin: 0 0 1rem; color: var(--muted); }
   align-items: center;
 }
 
-/* Soft watercolor / fog harbor band (CSS art — no photo twin) */
+/* Lens Gig Harbor hero — image fill, no text/navy wash on art */
 .harbor-hero__art {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(184, 212, 206, 0.55) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 50% at 20% 70%, rgba(61, 107, 82, 0.25) 0%, transparent 50%),
-    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(10, 46, 54, 0.45) 0%, transparent 60%),
-    linear-gradient(165deg, #1a4d56 0%, #0a2e36 38%, #3d6b52 72%, #b8d4ce 100%);
+  background: var(--seafoam-soft);
 }
-.harbor-hero__art::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 30% 25%, rgba(255, 252, 247, 0.18) 0%, transparent 35%),
-    radial-gradient(ellipse 120% 40% at 50% 85%, rgba(245, 240, 232, 0.35) 0%, transparent 55%);
-  pointer-events: none;
-}
-.harbor-hero__waves {
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 45%;
-  background:
-    repeating-linear-gradient(
-      -8deg,
-      transparent,
-      transparent 18px,
-      rgba(184, 212, 206, 0.12) 18px,
-      rgba(184, 212, 206, 0.12) 20px
-    );
-  opacity: 0.9;
-  pointer-events: none;
-}
-.harbor-hero__fog {
-  position: absolute;
-  top: 12%;
-  left: 8%;
-  right: 18%;
-  height: 28%;
-  background: linear-gradient(90deg, rgba(232, 236, 234, 0.15), rgba(232, 236, 234, 0.45), transparent);
-  border-radius: 40% 60% 50% 50%;
-  filter: blur(18px);
-  pointer-events: none;
+.harbor-hero__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center; /* desktop: harbor cluster; mist near copy seam */
 }
 .harbor-hero__caption {
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
   margin: 0;
-  font-size: 0.7rem;
-  color: rgba(245, 240, 232, 0.75);
-  text-align: right;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(10, 46, 54, 0.7);
+  background: rgba(255, 252, 247, 0.82);
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  text-align: left;
   z-index: 1;
+  max-width: 22rem;
 }
 
 .promise-band {
@@ -663,7 +637,11 @@ textarea { min-height: 110px; resize: vertical; }
   /* Mobile: art first, then solid type plate — AA contrast, no overlay */
   .harbor-hero__art {
     order: -1;
-    min-height: 200px;
+    min-height: 220px;
+    height: clamp(200px, 52vw, 280px);
+  }
+  .harbor-hero__img {
+    object-position: center 40%;
   }
   .harbor-hero__copy {
     border-right: 0;
