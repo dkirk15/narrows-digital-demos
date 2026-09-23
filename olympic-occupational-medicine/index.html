@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Olympic Occupational Medicine | Gig Harbor Preview — Narrows Digital</title>
-  <meta name="description" content="Occupational medicine in Gig Harbor — work injuries, personal injury, and employer services. Preview by Narrows Digital. Not affiliated with the practice." />
+  <title>Olympic Occupational Medicine | Gig Harbor Preview</title>
+  <meta name="description" content="Occupational medicine in Gig Harbor for injured workers and employers. Preview by Narrows Digital. Not affiliated with the practice." />
   <meta name="robots" content="noindex,nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="olympic.css?v=1" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="olympic.css?v=2" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="topbar">
     <div class="container">
       <span>Gig Harbor · 4411 Point Fosdick Dr #307</span>
@@ -27,77 +28,129 @@
           <span>Gig Harbor · Point Fosdick</span>
         </span>
       </a>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <ul class="nav-links" id="site-nav" data-nav-links>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="injured-workers.html">Injured workers</a></li>
-        <li class="nav-drop" data-nav-drop>
-          <button type="button" data-drop-toggle aria-expanded="false">Employers</button>
-          <ul class="nav-drop-menu">
-            <li><a href="employers.html">Overview</a></li>
-            <li><a href="drug-testing.html">Drug testing</a></li>
-            <li><a href="vaccinations.html">Vaccinations</a></li>
-            <li><a href="physical-exams.html">Physical exams</a></li>
-          </ul>
-        </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a class="nav-lang" href="es.html" lang="es">Español</a></li>
-        <li><a class="nav-cta" href="tel:2536490430">Call</a></li>
-      </ul>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="site-nav" data-nav-links>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="injured-workers.html">Injured workers</a></li>
+          <li class="nav-drop" data-nav-drop>
+            <a href="employers.html">Employers</a>
+            <button type="button" data-drop-toggle aria-expanded="false" aria-controls="employer-menu" aria-haspopup="true" aria-label="Employer services menu"><span aria-hidden="true">▾</span></button>
+            <ul class="nav-drop-menu" id="employer-menu">
+              <li><a href="employers.html">Overview</a></li>
+              <li><a href="drug-testing.html">Drug testing</a></li>
+              <li><a href="vaccinations.html">Vaccinations</a></li>
+              <li><a href="physical-exams.html">Physical exams</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="nav-cta" href="contact.html">Request appointment</a></li>
+        </ul>
+      </nav>
+      <div class="nav-tools">
+        <div class="lang-switch" aria-label="Language">
+            <a href="index.html" lang="en" hreflang="en" aria-current="true">EN</a>
+            <a href="es.html" lang="es" hreflang="es">Español</a>
+          </div>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
     </div>
   </header>
-  <main>
-    <section class="oly-hero" aria-label="Olympic Occupational Medicine introduction">
+  <main id="main" tabindex="-1">
+    <section class="oly-hero" aria-labelledby="hero-title">
       <div class="oly-hero__plate">
-        <p class="oly-hero__kicker">Gig Harbor · Point Fosdick</p>
-        <h1>Occupational medicine for injured workers and employers</h1>
-        <p class="lead">Work injuries, occupational disease, personal injury care, and employer compliance services — one independent clinic on Point Fosdick.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html">Request appointment</a>
-          <a class="btn btn-secondary" href="tel:2536490430">Call 253-649-0430</a>
+        <div class="oly-hero__plate-inner">
+          <p class="kicker">Gig Harbor · Point Fosdick</p>
+          <h1 id="hero-title">Occupational medicine for injured workers and employers</h1>
+          <hr class="rule" />
+          <p class="lead">Care for work injuries, occupational disease, and personal injury, including motor vehicle accidents. Employers have a path of equal weight for service requests.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Request appointment</a>
+            <a class="btn btn-secondary" href="tel:2536490430">Call 253-649-0430</a>
+          </div>
+          <p class="hero-meta">4411 Point Fosdick Dr #307 · Mon–Fri 9am–5pm · Fax 253-356-5721</p>
         </div>
       </div>
-      <div class="oly-hero__art" aria-hidden="true"><div class="oly-hero__trees"></div></div>
+      <div class="oly-hero__art">
+        <svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <rect width="800" height="1000" fill="#D9E2DD"/>
+        <path d="M0 430 L90 300 L190 410 L310 220 L450 400 L800 160 L800 640 L0 640 Z" fill="#E7EEEA"/>
+        <path d="M0 520 L140 390 L250 500 L390 330 L520 490 L660 360 L800 470 L800 720 L0 720 Z" fill="#2A5244"/>
+        <path d="M0 600 L100 500 L220 610 L360 460 L500 600 L640 470 L800 560 L800 820 L0 820 Z" fill="#1B3A2F"/>
+        <path d="M0 760 C140 720 260 800 400 750 C540 700 660 790 800 740 L800 1000 L0 1000 Z" fill="#8AA099"/>
+        <path d="M0 860 C180 820 340 900 520 840 C660 800 720 860 800 830 L800 1000 L0 1000 Z" fill="#64748B"/>
+        <polygon points="70,640 118,500 166,640" fill="#122820"/>
+        <polygon points="150,660 210,470 270,660" fill="#122820"/>
+        <polygon points="540,620 600,450 660,620" fill="#122820"/>
+        <polygon points="630,640 690,480 750,640" fill="#0F1720"/>
+        <rect x="318" y="548" width="168" height="132" fill="#F4F6F5"/>
+        <rect x="318" y="548" width="168" height="10" fill="#D97706"/>
+        <rect x="338" y="578" width="34" height="26" fill="#E7EEEA" stroke="#1B3A2F" stroke-width="3"/>
+        <rect x="384" y="578" width="34" height="26" fill="#E7EEEA" stroke="#1B3A2F" stroke-width="3"/>
+        <rect x="430" y="578" width="34" height="26" fill="#E7EEEA" stroke="#1B3A2F" stroke-width="3"/>
+        <rect x="386" y="624" width="36" height="56" fill="#1B3A2F"/>
+      </svg>
+        <p class="art-caption">Placeholder illustration — not the clinic exterior.</p>
+      </div>
     </section>
 
-    <section class="path-section">
+    <section class="path-section" aria-labelledby="paths-title">
       <div class="container">
+        <div class="path-intro">
+          <h2 id="paths-title">Two ways in</h2>
+          <p>Same clinic, two jobs. Pick the path that matches why you are here.</p>
+        </div>
         <div class="path-grid">
-          <a class="path-card" href="injured-workers.html">
-            <p class="path-card__label">Patients</p>
-            <h2>I'm injured / need care</h2>
-            <p>Work injury, L&amp;I, occupational disease, or personal injury — request a callback or call the clinic.</p>
-            <span class="path-card__go">Injured worker path →</span>
-          </a>
-          <a class="path-card path-card--employer" href="employers.html">
-            <p class="path-card__label">Employers</p>
-            <h2>I'm an employer / need compliance</h2>
-            <p>Drug testing, vaccinations, and physical exams for your workforce — request employer services.</p>
-            <span class="path-card__go">Employer services →</span>
-          </a>
+          <article class="path-card">
+            <p class="path-card__label">Injured worker</p>
+            <h2><a href="injured-workers.html">I need care</a></h2>
+            <ul>
+              <li>Work injury and L&amp;I</li>
+              <li>Occupational disease from the job</li>
+              <li>Next-business-day callback</li>
+            </ul>
+            <span class="path-card__go">Injured worker path</span>
+          </article>
+          <article class="path-card path-card--employer">
+            <p class="path-card__label">Employer</p>
+            <h2><a href="employers.html">I need employer services</a></h2>
+            <ul>
+              <li>Drug testing</li>
+              <li>Vaccinations</li>
+              <li>Physical exams</li>
+            </ul>
+            <span class="path-card__go">Employer path</span>
+          </article>
+        </div>
+        <div class="pi-strip">
+          <p>Hurt in a motor vehicle accident or another personal injury? The clinic’s public materials include that care.</p>
+          <a href="personal-injury.html">Personal injury path</a>
         </div>
       </div>
     </section>
 
-    <section class="proof-band">
+    <section class="proof-band" aria-label="Clinic facts">
       <div class="container proof-grid">
         <div class="proof-item">
           <strong>COHE Alliance of Western Washington</strong>
-          <span>Providers also list ACOEM and AANP memberships</span>
+          <span>Providers also list AANP and ACOEM</span>
         </div>
         <div class="proof-item">
-          <strong>Gig Harbor · Point Fosdick</strong>
-          <span>4411 Point Fosdick Dr #307 · Mon–Fri 9am–5pm</span>
+          <strong>4411 Point Fosdick Dr #307</strong>
+          <span>Gig Harbor, WA 98335 · Mon–Fri 9am–5pm</span>
+        </div>
+        <div class="proof-item">
+          <strong>Next-business-day callback</strong>
+          <span>Voicemail with name, date of birth, and reason</span>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="help-title">
       <div class="container">
         <div class="section-head">
-          <h2>How we can help</h2>
-          <p>Public service scope — request care or employer services; no invented protocols or prices on this preview.</p>
+          <h2 id="help-title">Where to start</h2>
+          <p>Public scope only. No prices and no invented protocols on this preview.</p>
         </div>
         <ul class="service-chips">
           <li><a href="injured-workers.html">Work injury / L&amp;I</a></li>
@@ -111,22 +164,30 @@
     </section>
 
     <section class="es-band" lang="es">
-      <div class="container prose-narrow">
-        <p class="es-lead">Hablamos español.</p>
-        <p>Tratamos las lesiones que ocurren en el trabajo o que se desarrollan con el tiempo debido a los requisitos de su trabajo. Nuestra asistente médica, Jaquelyn, habla español y podrá responder sus preguntas y ayudarle durante su visita. Se requiere que usemos servicios de intérprete licenciados para el examen.</p>
-        <a class="btn btn-forest" href="es.html">Continuar en español</a>
+      <div class="container es-layout">
+        <div>
+          <h2>Hablamos español.</h2>
+          <p class="es-copy">Tratamos las lesiones que ocurren en el trabajo o que se desarrollan con el tiempo debido a los requisitos de su trabajo. Nuestra asistente médica, Jaquelyn, habla español y podrá responder sus preguntas y ayudarle durante su visita.</p>
+          <p class="es-note">Se requiere que usemos servicios de intérprete licenciados para el examen.</p>
+        </div>
+        <div class="es-actions">
+          <a class="btn btn-forest" href="es.html">Continuar en español</a>
+          <a class="btn btn-secondary" href="tel:2536490430">Llamar 253-649-0430</a>
+        </div>
       </div>
     </section>
 
-    <section class="visit-band section">
+    <section class="visit-band section" aria-labelledby="visit-title">
       <div class="container visit-grid">
         <div>
-          <h2>Hours &amp; location</h2>
-          <p style="margin-bottom:1rem;">Call to confirm before you visit. Closed weekends and federal holidays.</p>
+          <h2 id="visit-title">Hours and location</h2>
+          <p>Call to confirm before you visit.</p>
           <table class="hours-table">
-            <tr><th>Monday – Friday</th><td>9:00am – 5:00pm</td></tr>
-            <tr><th>Saturday – Sunday</th><td>Closed</td></tr>
-            <tr><th>Federal holidays</th><td>Closed</td></tr>
+            <tbody>
+              <tr><th scope="row">Monday – Friday</th><td>9:00am – 5:00pm</td></tr>
+              <tr><th scope="row">Saturday – Sunday</th><td>Closed</td></tr>
+              <tr><th scope="row">Federal holidays</th><td>Closed</td></tr>
+            </tbody>
           </table>
           <p class="map-note"><strong>4411 Point Fosdick Dr #307</strong>, Gig Harbor, WA 98335</p>
           <p class="map-note"><a href="tel:2536490430">253-649-0430</a> · Fax 253-356-5721</p>
@@ -134,52 +195,53 @@
         <div>
           <div class="map-frame">
             <iframe
-              title="Map of 4411 Point Fosdick Dr #307, Gig Harbor WA"
+              title="Map of 4411 Point Fosdick Dr #307, Gig Harbor, Washington"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-122.59867%2C47.28856%2C-122.55867%2C47.30856&amp;layer=mapnik&amp;marker=47.29856%2C-122.57867"></iframe>
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-122.59416%2C47.28839%2C-122.56416%2C47.30839&amp;layer=mapnik&amp;marker=47.29839%2C-122.57916"></iframe>
           </div>
-          <p class="map-note">OpenStreetMap · Point Fosdick · <a href="https://www.openstreetmap.org/?mlat=47.29856&amp;mlon=-122.57867#map=16/47.29856/-122.57867">Open larger map</a></p>
-
+          <p class="map-note">OpenStreetMap · 4411 Point Fosdick Dr #307 · <a href="https://www.openstreetmap.org/?mlat=47.29839&amp;mlon=-122.57916#map=17/47.29839/-122.57916">Open larger map</a></p>
         </div>
       </div>
     </section>
 
     <section class="cta-band">
       <div class="container">
-        <h2>Need care or compliance services?</h2>
-        <p>Request a callback online, or call the clinic. Voicemails with name, date of birth, and reason are typically returned the next business day. This preview form stays on your device — nothing is stored.</p>
+        <h2>Need care, or a callback for your company?</h2>
+        <p>Request a callback online or call the clinic. Voicemails with name, date of birth, and reason are returned the next business day. This preview form stays on your device.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="contact.html">Request appointment</a>
-          <a class="btn btn-secondary" href="tel:2536490430" style="border-color:#A8B8B0;color:#E8EEEA">Call 253-649-0430</a>
+          <a class="btn btn-secondary" href="employers.html">Employer request</a>
         </div>
       </div>
     </section>
-
   </main>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3>Olympic Occupational Medicine, LLC</h3>
+          <h2>Olympic Occupational Medicine, LLC</h2>
           <p>4411 Point Fosdick Dr #307<br>Gig Harbor, WA 98335<br>
           <a href="tel:2536490430">253-649-0430</a> · Fax 253-356-5721</p>
         </div>
         <div>
-          <h3>Explore</h3>
+          <h2>Explore</h2>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="injured-workers.html">Injured workers</a></li>
             <li><a href="personal-injury.html">Personal injury</a></li>
             <li><a href="employers.html">Employers</a></li>
-            <li><a href="about.html">About / Providers</a></li>
+            <li><a href="drug-testing.html">Drug testing</a></li>
+            <li><a href="vaccinations.html">Vaccinations</a></li>
+            <li><a href="physical-exams.html">Physical exams</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Request appointment</a></li>
             <li><a href="es.html" lang="es">Español</a></li>
           </ul>
         </div>
         <div>
-          <h3>Preview notice</h3>
-          <p>No PHI is stored. Forms are client-side only for demo purposes. No HIPAA certification is claimed. No outreach from these pages.</p>
+          <h2>Preview notice</h2>
+          <p>Forms stay in the browser. This preview does not send or store what you type. No outreach from these pages.</p>
         </div>
       </div>
       <p class="preview-banner">Preview by Narrows Digital — not affiliated with the practice.</p>
@@ -190,6 +252,6 @@
     <a href="tel:2536490430">Call 253-649-0430</a>
     <a href="contact.html">Request callback</a>
   </div>
-  <script src="olympic.js"></script>
+  <script src="olympic.js?v=2"></script>
 </body>
 </html>
