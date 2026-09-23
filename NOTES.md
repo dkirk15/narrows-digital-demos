@@ -63,3 +63,16 @@
 - **Contact:** Client-side form (name, phone, email, preferred time, message); success local only; no PHI backend.
 - **Kept:** Exact footer banner; no pricing tables; no HIPAA claims; no outreach; not on their domain.
 - **Not used:** Kai A. Maulding / 604 S Meridian / (253) 845-7911 — different practice listing; omitted entirely.
+
+## Olympic Occupational Medicine (2026-09-22 PT)
+- **Old:** Wix brochure at https://www.olympicoccupationalmedicine.com/ — phone/voicemail funnel; Home · About · Contact only; title/meta sell drug testing & vaccinations but those paths **404**; no employer lane. Site address **#307**; some directories say Ste 305 (noted here only — primary address stays #307).
+- **Demo:** Practice-unique `olympic.css` + `olympic.js` — **not** a dental twin (no Literata / Barlow Condensed / Cormorant / Fraunces+DM Sans; no marina / fairgrounds / wheat / sand / teal / brick).
+- **Type:** IBM Plex Sans (UI/body) + Source Serif 4 sparingly for H1 only.
+- **Color:** Ink `#0F1720`, forest `#1B3A2F`, cool surface `#F4F6F5`, CTA amber `#D97706`, steel `#64748B`.
+- **Home:** Dual-path cards (injured worker vs employer) → COHE/location proof → service chips → Spanish band (public ES copy + Jaquelyn / licensed interpreters) → hours + OSM #307 → CTA.
+- **IA:** `injured-workers.html`, `personal-injury.html`, `employers.html`, `drug-testing.html`, `vaccinations.html`, `physical-exams.html`, `about.html`, `contact.html`, `es.html`.
+- **Providers:** Status chip **above** name — Turnbo amber “Returning patients only”; Broussard / Coughlin / Aden-Else green “Accepting new patients.” Initials in forest circles; public bio summaries only; optional Maya Angelou quote on Aden-Else.
+- **Contact:** Honest next-business-day callback; form fields name/phone/email/DOB optional/reason/new-vs-returning/callback window/message. Employer form on employers.html (company, contact, service needed — no prices).
+- **Address lock:** 4411 Point Fosdick Dr **#307**, Gig Harbor, WA 98335 · Phone **253-649-0430** · Fax **253-356-5721**.
+- **Kept:** Exact footer `Preview by Narrows Digital — not affiliated with the practice.`; no prices; no PHI backend; no HIPAA claims; no outreach; no invented clinicians; CSS place hero (not Lens); discreet “Hero is CSS/placeholder — not the clinic exterior.” footer note.
+- **Model note:** Built on executor default (Firstmate cannot select Grok 4.7).

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact & Request Appointment | Olympic Occupational Medicine Preview</title>
+  <meta name="description" content="Request a callback at Olympic Occupational Medicine, Gig Harbor. Preview form by Narrows Digital." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="olympic.css?v=1" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Gig Harbor · 4411 Point Fosdick Dr #307</span>
+      <span><a href="tel:2536490430">253-649-0430</a> · Fax 253-356-5721</span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">OO</span>
+        <span class="brand-text">
+          <strong>Olympic Occupational Medicine</strong>
+          <span>Gig Harbor · Point Fosdick</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <ul class="nav-links" id="site-nav" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="injured-workers.html">Injured workers</a></li>
+        <li class="nav-drop" data-nav-drop>
+          <button type="button" data-drop-toggle aria-expanded="false">Employers</button>
+          <ul class="nav-drop-menu">
+            <li><a href="employers.html">Overview</a></li>
+            <li><a href="drug-testing.html">Drug testing</a></li>
+            <li><a href="vaccinations.html">Vaccinations</a></li>
+            <li><a href="physical-exams.html">Physical exams</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a class="nav-lang" href="es.html" lang="es">Español</a></li>
+        <li><a class="nav-cta" href="tel:2536490430">Call</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="page-intro"><div class="container">
+      <h1>Contact &amp; request appointment</h1>
+      <p>Call, fax, or use the preview form. Voicemails with name, date of birth, and reason are typically returned the <strong>next business day</strong>.</p>
+    </div></div>
+    <section class="section"><div class="container contact-layout">
+      <div>
+        <ul class="contact-list">
+          <li><strong>Address</strong><span>4411 Point Fosdick Dr #307<br>Gig Harbor, WA 98335</span></li>
+          <li><strong>Phone</strong><span><a href="tel:2536490430">253-649-0430</a></span></li>
+          <li><strong>Fax</strong><span>253-356-5721</span></li>
+          <li><strong>Hours</strong><span>Mon–Fri 9:00am–5:00pm · Sat/Sun closed · Closed federal holidays</span></li>
+          <li><strong>Callback</strong><span>Leave voicemail with name, DOB, and reason — returned next business day</span></li>
+        </ul>
+        <p class="note">This clinic’s live site is phone/voicemail-first. This demo adds a structured request form so expectations match current ops — next-business-day callback, not instant booking.</p>
+        <p class="map-note" style="margin-top:1rem"><a href="https://www.openstreetmap.org/?mlat=47.29856&amp;mlon=-122.57867#map=16/47.29856/-122.57867">View on OpenStreetMap</a> · <a href="es.html" lang="es">Español</a></p>
+      </div>
+      <div class="form-card">
+        <h2>Appointment request</h2>
+        <p>Client-side preview only. Do not include sensitive clinical details beyond a short reason.</p>
+        <form data-booking-form novalidate>
+          <div class="form-grid">
+            <div>
+              <label for="name">Full name <span class="req">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+            </div>
+            <div class="form-grid two">
+              <div>
+                <label for="phone">Phone <span class="req">*</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(253) 555-0100" />
+              </div>
+              <div>
+                <label for="email">Email <span class="req">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+              </div>
+            </div>
+            <div>
+              <label for="dob">Date of birth <span style="font-weight:500;color:var(--steel)">(optional)</span></label>
+              <input id="dob" name="dob" type="date" autocomplete="bday" />
+            </div>
+            <div>
+              <label for="reason">Reason <span class="req">*</span></label>
+              <select id="reason" name="reason" required data-reason-select>
+                <option value="">Select a reason</option>
+                <option value="Work injury / L&amp;I">Work injury / L&amp;I</option>
+                <option value="Motor vehicle / personal injury">Motor vehicle / personal injury</option>
+                <option value="Employer service">Employer service</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div data-employer-block hidden>
+              <label for="company">Company name</label>
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="If employer service" />
+            </div>
+            <div class="form-grid two">
+              <div>
+                <label for="patient-type">New or returning <span class="req">*</span></label>
+                <select id="patient-type" name="patient_type" required>
+                  <option value="">Select</option>
+                  <option>New patient</option>
+                  <option>Returning patient</option>
+                </select>
+              </div>
+              <div>
+                <label for="callback">Preferred callback window <span class="req">*</span></label>
+                <select id="callback" name="callback" required>
+                  <option value="">Select a window</option>
+                  <option>Morning (9am–12pm)</option>
+                  <option>Afternoon (12pm–5pm)</option>
+                  <option>First available</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Brief reason for visit (demo only — do not include sensitive health details)"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send request (preview)</button>
+          </div>
+          <div class="form-success" data-form-success tabindex="-1" role="status">Thanks — this preview received your request locally. In a live Narrows Digital site, this would notify the practice. Expect next-business-day follow-up in real operations. No patient data was stored.</div>
+          <p class="form-hint">Preview for Olympic Occupational Medicine. Not a live booking system. Not affiliated with the practice.</p>
+        </form>
+      </div>
+    </div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Olympic Occupational Medicine, LLC</h3>
+          <p>4411 Point Fosdick Dr #307<br>Gig Harbor, WA 98335<br>
+          <a href="tel:2536490430">253-649-0430</a> · Fax 253-356-5721</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="injured-workers.html">Injured workers</a></li>
+            <li><a href="personal-injury.html">Personal injury</a></li>
+            <li><a href="employers.html">Employers</a></li>
+            <li><a href="about.html">About / Providers</a></li>
+            <li><a href="contact.html">Request appointment</a></li>
+            <li><a href="es.html" lang="es">Español</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Preview notice</h3>
+          <p>No PHI is stored. Forms are client-side only for demo purposes. No HIPAA certification is claimed. No outreach from these pages.</p>
+        </div>
+      </div>
+      <p class="preview-banner">Preview by Narrows Digital — not affiliated with the practice.</p>
+      <p class="asset-note">Hero is CSS/placeholder — not the clinic exterior.</p>
+    </div>
+  </footer>
+  <div class="mobile-callbar" aria-label="Quick actions">
+    <a href="tel:2536490430">Call 253-649-0430</a>
+    <a href="contact.html">Request callback</a>
+  </div>
+  <script src="olympic.js"></script>
+</body>
+</html>
