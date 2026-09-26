@@ -271,9 +271,29 @@ p { margin: 0 0 1rem; color: var(--muted); }
   max-width: min(40%, 28rem);
   width: 100%;
 }
-.place-hero h1 {
+.place-hero h1,
+.place-hero__content h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.85rem, 2.8vw + 0.4rem, 2.9rem);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+  max-width: 100%;
   color: #fffbf7; /* warm paper / off-white — brick only on CTAs */
-  margin-bottom: 0.85rem;
+  margin: 0 0 0.3rem;
+}
+.place-hero__content .hero-subhead {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.08rem, 0.7vw + 0.72rem, 1.4rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  text-wrap: balance;
+  color: #fffbf7;
+  margin: 0 0 0.75rem;
+  max-width: 100%;
 }
 .place-hero .lead {
   color: rgba(255, 251, 247, 0.90);
@@ -302,7 +322,8 @@ p { margin: 0 0 1rem; color: var(--muted); }
   background: none;
 }
 .place-hero--illustrated .place-hero__content {
-  max-width: min(44%, 32rem);
+  /* Modestly wider so the practice name stays one line on the cream plate */
+  max-width: min(48%, 36rem);
   /* Solid cream type plate — opaque so lead/ghost CTA AA-pass on desktop + mobile */
   background: #fffbf7;
   border: 1px solid rgba(16, 20, 24, 0.08);
@@ -311,7 +332,8 @@ p { margin: 0 0 1rem; color: var(--muted); }
   box-shadow: 0 12px 32px rgba(16, 20, 24, 0.12);
   margin: 2.5rem 0 2.25rem;
 }
-.place-hero--illustrated h1 {
+.place-hero--illustrated h1,
+.place-hero--illustrated .hero-subhead {
   color: #0c1624;
 }
 .place-hero--illustrated .lead {

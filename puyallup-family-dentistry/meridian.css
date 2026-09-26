@@ -270,7 +270,27 @@ p { margin: 0 0 1rem; color: var(--muted); }
   color: var(--amber-dark);
   margin: 0 0 0.75rem;
 }
-.valley-hero__copy h1 { margin-bottom: 0.75rem; }
+.valley-hero__copy h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.05rem, 3.4vw + 0.45rem, 3.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  max-width: 100%;
+  margin: 0 0 0.3rem;
+}
+.valley-hero__copy .hero-subhead {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 0.6vw + 0.75rem, 1.45rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  color: var(--evergreen);
+  margin: 0 0 0.7rem;
+  max-width: 36rem;
+}
 .valley-hero__copy .lead {
   font-size: 1.08rem;
   color: var(--muted);
