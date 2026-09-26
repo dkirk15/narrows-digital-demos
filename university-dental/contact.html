@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request appointment | University Dental — Booking Preview by Narrows Digital</title>
+  <meta name="description" content="Call (253) 564-1501 or request an appointment at University Dental, 7820 27th St W, Ste A, University Place. The form is a preview and does not send your message." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="sound.css?v=hero-v1" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="topbar">
+    <div class="container">
+      <span>University Place · 7820 27th St W, Ste A</span>
+      <span><a href="tel:2535641501">(253) 564-1501</a></span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">UD</span>
+        <span class="brand-text">
+          <strong>University Dental</strong>
+          <span>University Place · 27th St W</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <ul class="nav-links" id="site-nav" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Dr. Lu</a></li>
+        <li><a href="new-patients.html">New patients</a></li>
+        <li><a class="nav-cta" href="contact.html" aria-current="page">Request appointment</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="page-intro">
+      <div class="container">
+        <h1>Request an appointment</h1>
+        <p>Call the office, or fill in the preview form. Nothing you type is sent or stored.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="aside-card">
+          <ul class="contact-list">
+            <li>
+              <strong>Address</strong>
+              <span>7820 27th St W, Ste A<br>University Place, WA 98466</span>
+            </li>
+            <li>
+              <strong>Phone</strong>
+              <span><a href="tel:2535641501">(253) 564-1501</a></span>
+            </li>
+            <li>
+              <strong>Hours</strong>
+              <span>Mon–Fri 8:00 am–6:00 pm<br>Sat–Sun closed</span>
+            </li>
+          </ul>
+          <p class="hours-note">Listed hours — please call to confirm.</p>
+          <a class="btn btn-primary" href="tel:2535641501">Call (253) 564-1501</a>
+          <div class="map-frame">
+            <iframe
+              title="Map of 7820 27th St W, University Place, Washington"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-122.552%2C47.228%2C-122.532%2C47.242&amp;layer=mapnik&amp;marker=47.235079%2C-122.542026"></iframe>
+          </div>
+          <p class="map-note">OpenStreetMap · <a href="https://www.openstreetmap.org/?mlat=47.235079&amp;mlon=-122.542026#map=17/47.23508/-122.54203">Open larger map</a></p>
+        </div>
+
+        <div class="form-card">
+          <h2>Appointment request</h2>
+          <p>This form stays on your device. Submitting shows a preview message only.</p>
+          <form data-booking-form novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+              <p class="field-error" id="name-error" data-error-for="name">Enter your name.</p>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="Your phone" />
+                <p class="field-error" id="phone-error" data-error-for="phone">Enter a phone number with at least 10 digits.</p>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="Your email" />
+                <p class="field-error" id="email-error" data-error-for="email">Enter an email address.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="when">Preferred day and time</label>
+              <input id="when" name="when" type="text" required placeholder="Example: Tuesday afternoon" />
+              <p class="field-error" id="when-error" data-error-for="when">Enter a preferred day and time.</p>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="patient-status">New or returning</label>
+                <select id="patient-status" name="patient-status" required>
+                  <option value="">Select one</option>
+                  <option value="new">New to the practice</option>
+                  <option value="returning">Returning</option>
+                </select>
+                <p class="field-error" id="patient-status-error" data-error-for="patient-status">Select new or returning.</p>
+              </div>
+              <div class="field">
+                <label for="reason">What is this about?</label>
+                <select id="reason" name="reason" data-reason>
+                  <option value="">Select a topic (optional)</option>
+                  <option value="exam">Exam &amp; cleaning</option>
+                  <option value="filling">Filling</option>
+                  <option value="crown">Crown or bridge</option>
+                  <option value="gums">Gum health</option>
+                  <option value="denture">Dentures</option>
+                  <option value="emergency">Emergency visit</option>
+                  <option value="whitening">Whitening or cosmetic</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Brief message</label>
+              <textarea id="message" name="message" aria-describedby="message-help"></textarea>
+              <p class="form-help" id="message-help">Please don't include medical details</p>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit request (preview)</button>
+            <div class="form-success" data-form-success tabindex="-1" role="status">This is a preview — nothing was sent. Please call (253) 564-1501 to book.</div>
+            <p class="form-hint">Preview for University Dental. To book, call (253) 564-1501.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>University Dental</h2>
+          <p>Independent general dentistry in University Place. A booking preview by Narrows Digital — not the practice’s live site.</p>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Dr. Lu</a></li>
+            <li><a href="new-patients.html">New patients</a></li>
+            <li><a href="contact.html">Request appointment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Visit</h2>
+          <p>7820 27th St W, Ste A<br>University Place, WA 98466</p>
+          <p><a href="tel:2535641501">(253) 564-1501</a></p>
+          <p>Mon–Fri 8:00 am–6:00 pm<br>Sat–Sun closed</p>
+          <p class="hours-note">Listed hours — please call to confirm.</p>
+        </div>
+      </div>
+      <p class="preview-banner">Preview by Narrows Digital — not affiliated with the practice.</p>
+      <p class="asset-note">Hero art is an AI-generated placeholder illustration — not the clinic.</p>
+      <p class="copy-year">© <span data-year>2026</span> Narrows Digital preview</p>
+    </div>
+  </footer>
+  <script src="sound.js"></script>
+</body>
+</html>
