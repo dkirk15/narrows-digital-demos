@@ -1,0 +1,129 @@
+/* Puyallup Family Dentistry — name-over-hero overlay (mockup v2)
+   Loaded AFTER meridian.css. Spec: hero-title-retrofit/v2/palette-overlay-spec.md
+   "CHANGED:" comments mark values that differ from meridian.css. */
+
+/* ---- Header: logo mark only (brand-text removed from markup) ---- */
+.brand { gap: 0; }                                   /* CHANGED: was 0.75rem */
+
+/* ---- Hero: full-bleed art with name overlay; split panel retired ---- */
+.valley-hero.valley-hero--title {
+  display: block;                                    /* CHANGED: was grid 1.05fr/.95fr split */
+  position: relative;
+  min-height: 0;                                     /* CHANGED: was clamp(380px, 52vw, 520px) */
+  height: min(62vh, 620px);                          /* NEW */
+  overflow: hidden;
+  background: var(--wheat);                          /* CHANGED: was var(--surface) */
+}
+.valley-hero--title .valley-hero__art {
+  position: absolute;
+  inset: 0;
+  display: block;
+  height: 100%;                                      /* CHANGED: meridian ≤860 set clamp(220px, 56vw, 300px) */
+  min-height: 0;                                     /* CHANGED: was 280px (240px ≤860) */
+  order: 0;                                          /* CHANGED: meridian ≤860 set -1 */
+  background: #f3ead6;
+}
+.valley-hero--title .valley-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;                          /* CHANGED: was 58% center — keeps Rainier's summit + grandstand */
+}
+.valley-hero__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(244,234,216,.85) 0%, rgba(244,234,216,.5) 28%, rgba(244,234,216,0) 48%); /* --wheat corner wash, per spec */
+}
+.hero-title-wrap {
+  position: absolute;
+  left: max(1rem, calc((100% - var(--max)) / 2));    /* aligns to .container */
+  top: 9%;
+  z-index: 1;
+}
+.hero-title {
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--evergreen);
+  text-wrap: nowrap;
+}
+.hero-title__main {
+  display: block;
+  font-weight: 700;
+  font-size: clamp(3.25rem, 7vw, 6.25rem);          /* CHANGED: h1 was clamp(2.05rem, 3.4vw + .45rem, 3.3rem) */
+  line-height: .9;                                   /* CHANGED: was 1.08 */
+  letter-spacing: -0.01em;                           /* CHANGED: was -0.015em */
+}
+.hero-title__sub {
+  display: block;
+  font-style: italic;
+  font-weight: 600;
+  font-size: calc(clamp(3.25rem, 7vw, 6.25rem) * .56); /* spec: .56em of "Puyallup" */
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: var(--evergreen-mid);
+  margin-top: .1em;
+}
+.hero-ornament {
+  display: flex;
+  gap: 8px;                                          /* spec: 8px spacing */
+  margin: .9rem 0 .55rem;
+}
+.hero-ornament span {
+  width: 6px; height: 6px;                           /* spec: three 6px dots */
+  border-radius: 50%;
+  background: var(--amber);
+}
+.hero-kicker {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--evergreen-mid);
+}
+
+/* ---- Below-hero band: h2 tagline, lead, CTAs ---- */
+.hero-intro {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(1.75rem, 3.5vw, 2.5rem) 0;
+}
+.hero-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.25rem 2.5rem;
+  align-items: end;
+}
+.hero-intro .hero-subhead {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.2vw + 1.1rem, 2rem);   /* CHANGED: was clamp(1.1rem, .6vw + .75rem, 1.45rem) — now lead h2 below hero */
+  line-height: 1.2;
+  color: var(--evergreen);
+  margin: 0 0 .45rem;
+  text-wrap: balance;
+}
+.hero-intro .lead { font-size: 1.08rem; max-width: 52ch; margin: 0; } /* CHANGED: max-width was 36ch */
+.hero-intro .hero-actions { margin-top: 0; }         /* CHANGED: was 1.35rem */
+
+@media (max-width: 1100px) and (min-width: 641px) {
+  .hero-title-wrap { left: clamp(1.25rem, 3vw, 2rem); }
+}
+@media (max-width: 860px) {
+  .hero-intro__grid { grid-template-columns: 1fr; align-items: start; }
+}
+
+/* ---- Mobile ≤640: 4:5 art (v3b), top-down wheat scrim ---- */
+@media (max-width: 640px) {
+  .valley-hero.valley-hero--title { height: auto; aspect-ratio: 4 / 5; }
+  .valley-hero--title .valley-hero__img { object-position: 50% 50%; }
+  .valley-hero__scrim {
+    background: linear-gradient(180deg, rgba(244,234,216,.88) 0%, rgba(244,234,216,.5) 40%, transparent 62%);
+  }
+  .hero-title-wrap { left: 1.25rem; top: 1.5rem; }
+  .hero-title__main { font-size: clamp(2.75rem, 14vw, 3.5rem); }
+  .hero-title__sub { font-size: calc(clamp(2.75rem, 14vw, 3.5rem) * .56); }
+  .hero-intro { padding: 1.5rem 0 1.75rem; }
+}

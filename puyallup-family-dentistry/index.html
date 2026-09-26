@@ -8,8 +8,9 @@
   <meta name="robots" content="noindex,nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="meridian.css?v=title-v1" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="meridian.css?v=title-v2" />
+  <link rel="stylesheet" href="puyallup-family-dentistry-overlay.css?v=title-v2" />
 </head>
 <body>
   <div class="topbar">
@@ -20,12 +21,8 @@
   </div>
   <header class="site-header">
     <div class="container nav-row">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Puyallup Family Dentistry, home">
         <span class="brand-mark" aria-hidden="true">PF</span>
-        <span class="brand-text">
-          <strong>Puyallup Family Dentistry</strong>
-          <span>South Hill · Puyallup</span>
-        </span>
       </a>
       <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
       <ul class="nav-links" id="site-nav" data-nav-links>
@@ -38,19 +35,32 @@
   </header>
 
   <main>
-    <section class="valley-hero" aria-label="Puyallup South Hill introduction">
-      <div class="valley-hero__copy">
-        <p class="valley-hero__kicker">Puyallup · South Hill</p>
-        <h1>Puyallup Family Dentistry</h1>
-        <h2 class="hero-subhead">Family dentistry for children, teens, and adults</h2>
-        <p class="lead">High-quality, affordable care on 112th Street East — accepting new patients since 2011.</p>
+    <section class="valley-hero valley-hero--title" aria-labelledby="hero-title">
+      <picture class="valley-hero__art">
+        <source media="(max-width: 640px)" srcset="assets/puyallup-family-dentistry-hero-4x5-v3b.jpg?v=title-v2" width="1080" height="1350" />
+        <img class="valley-hero__img" src="assets/puyallup-family-dentistry-hero-16x9-v3.jpg?v=title-v2" alt="" width="2560" height="1440" />
+      </picture>
+      <div class="valley-hero__scrim" aria-hidden="true"></div>
+      <div class="hero-title-wrap">
+        <h1 id="hero-title" class="hero-title">
+          <span class="hero-title__main">Puyallup</span>
+          <span class="hero-title__sub">Family Dentistry</span>
+        </h1>
+        <div class="hero-ornament" aria-hidden="true"><span></span><span></span><span></span></div>
+        <p class="hero-kicker">South Hill · Puyallup</p>
+      </div>
+    </section>
+
+    <section class="hero-intro">
+      <div class="container hero-intro__grid">
+        <div class="hero-intro__copy">
+          <h2 class="hero-subhead">Family dentistry for children, teens, and adults</h2>
+          <p class="lead">High-quality, affordable care on 112th Street East — accepting new patients since 2011.</p>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="contact.html">Request appointment</a>
           <a class="btn btn-secondary" href="tel:2537700529">Call (253) 770-0529</a>
         </div>
-      </div>
-      <div class="valley-hero__art" aria-hidden="true">
-        <img class="valley-hero__img" src="assets/hero-puyallup-16x9-v2-wired.png?v=2" alt="" width="1280" height="720" />
       </div>
     </section>
 
@@ -154,6 +164,6 @@
       <p class="asset-note">Hero illustration is AI / placeholder — Puyallup fairgrounds vibe; not the practice exterior; not an official fair image.</p>
     </div>
   </footer>
-  <script src="meridian.js"></script>
+  <script src="meridian.js?v=title-v2"></script>
 </body>
 </html>
