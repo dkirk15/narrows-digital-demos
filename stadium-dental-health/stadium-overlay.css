@@ -5,6 +5,20 @@
 /* ---- Header: no brand mark, nav right-aligned ---- */
 .nav-row { justify-content: flex-end; }              /* CHANGED: was space-between (mark sat on the left) */
 
+/* Inner pages: plain text wordmark at the left of the header (FM-STADIUM-INNER-NAME-1) */
+.site-wordmark {
+  margin-right: auto;                 /* pushes nav/Menu right; home has no wordmark so flex-end still applies */
+  font-family: var(--font-display);   /* Barlow Condensed */
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
+  line-height: 1.05;
+  letter-spacing: .01em;
+  color: #0c1624;
+  text-decoration: none;
+  min-width: 0;
+}
+.site-wordmark:hover { color: #0c1624; text-decoration: underline; text-underline-offset: 4px; }
+
 /* ---- Hero: full-bleed art, name set on the open cream ---- */
 .place-hero.place-hero--title {
   display: block;                                    /* CHANGED: was flex, align-items end */
@@ -141,4 +155,85 @@
   .hero-intro .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
   .hero-intro .hero-actions .btn { width: 100%; }
   .hero-intro__actions { align-items: stretch; }
+}
+
+/* ---- Mobile menu panel (FM-STADIUM-MENU-1) ----
+   Push the page down: the open list is a flex line inside .nav-row, not an
+   absolute overlay. Full-bleed: container gutter is 1rem at these widths
+   (width: min(100% - 2rem, var(--max))), so the border box is 2rem wider
+   than the row and pulled back by 1rem each side — viewport edge to edge,
+   margin box still fits the row (no horizontal scroll). Inner padding puts
+   link text on the same left edge as the wordmark / page content.
+   A zero-width spacer holds the Menu row at --header-h so the toggle does
+   not jump when the panel opens. Desktop (>800px) is untouched. */
+@media (max-width: 800px) {
+  .nav-row:has(.nav-links.open) {
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .nav-row:has(.nav-links.open)::before {
+    content: "";
+    order: 2;
+    flex: 0 0 auto;
+    width: 0;
+    height: var(--header-h);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .site-header:has(.nav-links.open) {
+    border-bottom-width: 0; /* panel supplies the bottom rule; avoid a double line */
+  }
+  .nav-links.open {
+    position: static;
+    order: 3;
+    flex: 0 0 calc(100% + 2rem);
+    width: calc(100% + 2rem);
+    max-width: none;
+    min-width: 0;
+    margin-inline: -1rem;
+    padding: 0 1rem 1rem;
+    gap: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: #fff;
+    border-top: 3px solid #b43a2f;
+    border-bottom: 1px solid var(--line);
+    border-left: 0;
+    border-right: 0;
+    box-shadow: 0 10px 24px -12px rgba(12, 22, 36, .28);
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+  .nav-links.open > li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .nav-links.open > li:not(:last-child) {
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links.open a:not(.nav-cta) {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 46px;
+    padding: 0;
+  }
+  .nav-links.open > li:last-child {
+    border-bottom: 0;
+    padding-top: 0.85rem;
+  }
+  .nav-links.open a.nav-cta {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    /* .btn padding. The ≤800px ".nav-links a" padding would otherwise shrink Book. */
+    padding: 0.78rem 1.2rem;
+    justify-content: center;
+    text-align: center;
+  }
 }
