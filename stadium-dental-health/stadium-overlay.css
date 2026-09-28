@@ -1,0 +1,144 @@
+/* Stadium Dental Health — name-over-hero overlay (shipped 2026-09-28)
+   Loaded AFTER stadium.css (unchanged). Stadium tokens only: Barlow Condensed display,
+   Source Sans 3 UI, navy-ink #0c1624, brick var(--brick). "CHANGED:" = differs from stadium.css. */
+
+/* ---- Header: N/S mark only (brand-text removed from markup) ---- */
+.brand { gap: 0; }                                   /* CHANGED: was .7rem */
+
+/* ---- Hero: full-bleed art, name set on the open cream ---- */
+.place-hero.place-hero--title {
+  display: block;                                    /* CHANGED: was flex, align-items end */
+  position: relative;
+  min-height: 0;                                     /* CHANGED: was clamp(380px, 58vw, 520px) */
+  height: min(70vh, 640px, 56.25vw);                 /* NEW: 630px at 1440x900 */
+  overflow: hidden;
+  background: #f5e9cf;                               /* CHANGED: was navy; = the art's flat paper cream (245,233,207) */
+  color: #0c1624;
+}
+.place-hero--title .place-hero__media {
+  position: absolute;
+  inset: 0;
+}
+.place-hero--title .place-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;                          /* CHANGED: was 62% center; keeps Rainier's summit + the waterfront street */
+}
+/* No scrim: the left ~40% of the art is flat cream, so ink reads at full contrast. */
+
+.hero-title-wrap {
+  position: absolute;
+  z-index: 1;
+  left: max(1rem, calc((100% - var(--max)) / 2));    /* = .container left edge */
+  top: 5%;
+  max-width: 34%;
+}
+.place-hero .hero-title {                           /* .place-hero scope beats stadium.css ".place-hero h1" */
+  margin: 0;
+  font-family: var(--font-display);                  /* Barlow Condensed */
+  font-weight: 700;
+  font-size: clamp(3rem, 5.8vw, 5.25rem);              /* CHANGED: was clamp(1.85rem, 2.8vw + .4rem, 2.9rem) inside the card */
+  line-height: .9;
+  letter-spacing: .005em;
+  color: #0c1624;                                    /* the illustrated h1 ink from stadium.css */
+  text-wrap: nowrap;
+}
+.hero-title__line { display: block; }
+.hero-title__rule {
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin: 1rem 0 .75rem;
+  background: var(--brick);                          /* #b43a2f */
+}
+.hero-kicker {
+  margin: 0;
+  font-family: var(--font);                          /* Source Sans 3 */
+  font-weight: 700;
+  font-size: .8rem;
+  line-height: 1.2;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(12, 22, 36, .75);
+}
+
+/* ---- Band below the hero: tagline h2, lead, CTAs, smile link, AI caption ---- */
+.hero-intro {
+  background: var(--surface);                        /* #fffbf7-ish, same as the old card */
+  border-bottom: 1px solid var(--line);
+  padding: clamp(1.75rem, 3.5vw, 2.5rem) 0 1.25rem;
+}
+.hero-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.25rem 2.5rem;
+  align-items: end;
+}
+.hero-intro .hero-subhead {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.2vw + 1rem, 2rem);      /* CHANGED: was clamp(1.08rem, .7vw + .72rem, 1.4rem) in the card */
+  line-height: 1.12;
+  letter-spacing: .01em;
+  color: #0c1624;
+  margin: 0 0 .5rem;
+  text-wrap: balance;
+}
+.hero-intro .lead {
+  color: #3a424c;
+  font-size: 1.1rem;
+  max-width: 52ch;
+  margin: 0;
+}
+.hero-intro__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .6rem;
+}
+.hero-intro .hero-actions { margin-top: 0; }
+.hero-intro .btn-secondary { background: #fffbf7; color: #101418; border-color: #101418; }
+.hero-intro .btn-secondary:hover { background: #101418; color: #fffbf7; }
+.hero-intro .photo-credit {
+  margin: 1.25rem 0 0;
+  color: rgba(16, 20, 24, .55);
+}
+
+@media (max-width: 860px) {
+  .hero-intro__grid { grid-template-columns: 1fr; align-items: start; }
+  .hero-intro__actions { align-items: flex-start; }
+}
+
+/* ---- Tablet 641–1100: container edge is only 1rem; inset the title a bit ---- */
+@media (max-width: 1100px) and (min-width: 641px) {
+  .hero-title-wrap { left: clamp(1.25rem, 3vw, 2rem); }
+}
+
+/* ---- "Cream bleed" (≤900px). Below ~900px the 16:9 frame has too little cream above the
+   landmarks for a 3-line name. The art's paper is one flat color, so the hero box is made
+   taller than the art and the art is pinned to the bottom-right; the extra height is filled
+   with the same cream and reads as more sky. No image stretching, no landmark cropping. ---- */
+@media (max-width: 900px) {
+  .place-hero.place-hero--title { height: auto; aspect-ratio: var(--hero-ratio, 16 / 11); }
+  .place-hero--title .place-hero__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: var(--art-w, 100%);                       /* >100% trims the empty cream on the art's left */
+    height: auto;
+    max-width: none;
+    object-fit: fill;
+  }
+}
+
+/* ---- Phones ≤640: 4:5 hero, art zoomed so it trims its empty left cream ---- */
+@media (max-width: 640px) {
+  .place-hero.place-hero--title { --hero-ratio: 4 / 5; --art-w: 122%; }
+  .hero-title-wrap { left: 1.25rem; top: 1.25rem; right: 1.25rem; max-width: none; }
+  .place-hero .hero-title { font-size: clamp(2.6rem, 13vw, 3.25rem); }
+  .hero-intro { padding: 1.5rem 0 1.25rem; }
+  .hero-intro .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
+  .hero-intro .hero-actions .btn { width: 100%; }
+  .hero-intro__actions { align-items: stretch; }
+}
