@@ -761,6 +761,13 @@ p { margin: 0 0 1rem; }
   padding-right: 0.75rem;
 }
 
+/* FM-OOM-HOURS-320-1: fit hours table at 320px */
+@media (max-width: 374px) {
+  .visit-grid > * { min-width: 0; }
+  .hours-table th { width: auto; }
+  .map-frame { width: 100%; max-width: 100%; }
+}
+
 .map-frame {
   border: 1px solid var(--line);
   border-radius: var(--radius);
