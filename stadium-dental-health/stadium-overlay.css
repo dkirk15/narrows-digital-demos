@@ -2,8 +2,8 @@
    Loaded AFTER stadium.css (unchanged). Stadium tokens only: Barlow Condensed display,
    Source Sans 3 UI, navy-ink #0c1624, brick var(--brick). "CHANGED:" = differs from stadium.css. */
 
-/* ---- Header: N/S mark only (brand-text removed from markup) ---- */
-.brand { gap: 0; }                                   /* CHANGED: was .7rem */
+/* ---- Header: no brand mark, nav right-aligned ---- */
+.nav-row { justify-content: flex-end; }              /* CHANGED: was space-between (mark sat on the left) */
 
 /* ---- Hero: full-bleed art, name set on the open cream ---- */
 .place-hero.place-hero--title {
