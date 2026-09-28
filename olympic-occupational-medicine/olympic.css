@@ -1238,3 +1238,110 @@ textarea[aria-invalid="true"] {
     animation: none !important;
   }
 }
+
+/* === Home hero: business name over art (Palette v5, 2026-09-28) === */
+
+/* === Mockup v5 (v4 layout, hero art v3 with tug): business name over hero, Source Serif 4, Olympic Mountains v2 art (madrona bluff) (2026-09-25) === */
+
+/* 1. Header: mark only (name text removed from markup) */
+.brand { gap: 0; }
+
+/* 2. Hero title overlay */
+.oly-hero__art { position: relative; }
+
+/* v4 art: Olympic Mountains v2 16:9 (<picture> swaps to 4:5 v2 at <=640px).
+   Hero height: taller than v3 so the low ridge, open water and the madrona trunk all fit;
+   capped at the image's own 16:9 height (56.25vw) so no upscaling crop on narrower screens.
+   object-position y 0%: anchor the top of the art so the title keeps the full sky above the ridge. */
+.oly-hero__art { height: min(72vh, 680px, 56.25vw); }
+.oly-hero__art picture { display: contents; }
+.oly-hero__img { object-position: 50% 0%; }
+
+/* Scrim: none (as v3). The mountain sky is light and smooth; #0F1720 ink reads clearly
+   without it, including near the warm horizon glow (compared at .45 peak vs none). */
+.oly-hero__art::after { content: none; }
+
+.oly-hero__title {
+  position: absolute;
+  z-index: 2;
+  left: max(1rem, calc((100% - var(--max)) / 2));   /* = .container left edge */
+  top: 4.5%;                         /* v4: raised (v3 9%) so the kicker clears the low ridge */
+  max-width: 42%;
+  line-height: normal;               /* .oly-hero__art sets line-height: 0 */
+}
+
+.oly-hero__name {
+  margin: 0;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-size: clamp(2.75rem, 4.2vw, 3.75rem);   /* v4: was clamp(2.75rem, 4.8vw, 4.25rem); ridge horizon (~36-40%) caps the block height */
+  line-height: .98;
+  letter-spacing: -0.02em;
+  color: #0F1720;
+  text-shadow: none;
+}
+.oly-hero__name span { display: block; }
+
+.oly-hero__name-rule {
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 1.1rem 0 .8rem;
+  background: #D97706;
+}
+
+.oly-hero__name-kicker {
+  margin: 0;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: .8rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(15,23,32,.75);         /* #0F1720 @ 75% */
+}
+
+/* 3. Former h1 below the hero, now h2 with the same visual style */
+.oly-hero__headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.05rem, 4.4vw, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+/* 4. Mobile (<=640px): 4:5 art via <picture>, no scrim */
+@media (max-width: 640px) {
+  .oly-hero__art {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+  .oly-hero__img {
+    object-fit: cover;
+    object-position: 50% 50%;    /* 4:5 art in a 4:5 box: full frame, position is inert */
+  }
+  .oly-hero__title {
+    left: 1.25rem;
+    top: 1.5rem;
+    max-width: calc(100% - 2.5rem);
+  }
+  .oly-hero__name { font-size: clamp(2.1rem, 9.5vw, 2.6rem); }
+}
+
+/* 4a. Tablets. The 16:9 frame at full width leaves only ~0.2 x viewport-width of sky above the
+   ridge, too little for the title. So on tablets the hero is taller than 16:9: cover zooms the art,
+   the extra width is cropped from the LEFT (x 100%, open water) so the firs and madrona stay whole,
+   and the sky above the ridge grows with the height. The title steps down a size. */
+@media (min-width: 901px) and (max-width: 1199px) {     /* e.g. 1024x768 */
+  .oly-hero__art { height: min(80vh, 620px, 60.5vw); }
+  .oly-hero__img { object-position: 100% 0%; }
+  .oly-hero__title { top: 22px; }
+  .oly-hero__name { font-size: 2.5rem; }
+}
+@media (min-width: 641px) and (max-width: 900px) {      /* e.g. 820x1180 */
+  .oly-hero__art { height: min(600px, 73vw); }
+  .oly-hero__img { object-position: 100% 0%; }
+  .oly-hero__title { top: 22px; }
+  .oly-hero__name { font-size: 2.4rem; }
+}
