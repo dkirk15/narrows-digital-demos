@@ -19,6 +19,11 @@
 }
 .site-wordmark:hover { color: #0c1624; text-decoration: underline; text-underline-offset: 4px; }
 
+/* Below ~331px the full wordmark, the 1rem gap, and Menu no longer share one row */
+@media (max-width: 330px) {
+  .site-wordmark { font-size: 1.15rem; }
+}
+
 /* ---- Hero: full-bleed art, name set on the open cream ---- */
 .place-hero.place-hero--title {
   display: block;                                    /* CHANGED: was flex, align-items end */
@@ -45,14 +50,14 @@
   position: absolute;
   z-index: 1;
   left: max(1rem, calc((100% - var(--max)) / 2));    /* = .container left edge */
-  top: 5%;
+  top: 4%;
   max-width: 34%;
 }
 .place-hero .hero-title {                           /* .place-hero scope beats stadium.css ".place-hero h1" */
   margin: 0;
   font-family: var(--font-display);                  /* Barlow Condensed */
   font-weight: 700;
-  font-size: clamp(3rem, 5.8vw, 5.25rem);              /* CHANGED: was clamp(1.85rem, 2.8vw + .4rem, 2.9rem) inside the card */
+  font-size: clamp(2.6rem, 4.6vw, 4.25rem);            /* CHANGED: was clamp(1.85rem, 2.8vw + .4rem, 2.9rem) inside the card */
   line-height: .9;
   letter-spacing: .005em;
   color: #0c1624;                                    /* the illustrated h1 ink from stadium.css */
@@ -135,6 +140,7 @@
    with the same cream and reads as more sky. No image stretching, no landmark cropping. ---- */
 @media (max-width: 900px) {
   .place-hero.place-hero--title { height: auto; aspect-ratio: var(--hero-ratio, 16 / 11); }
+  .hero-title-wrap { top: 2%; } /* 16/11 frame is shortest at 641px; 4% lets the kicker meet the tree */
   .place-hero--title .place-hero__img {
     position: absolute;
     right: 0;
@@ -150,7 +156,7 @@
 @media (max-width: 640px) {
   .place-hero.place-hero--title { --hero-ratio: 4 / 5; --art-w: 122%; }
   .hero-title-wrap { left: 1.25rem; top: 1.25rem; right: 1.25rem; max-width: none; }
-  .place-hero .hero-title { font-size: clamp(2.6rem, 13vw, 3.25rem); }
+  .place-hero .hero-title { font-size: clamp(2.2rem, 10.5vw, 2.75rem); }
   .hero-intro { padding: 1.5rem 0 1.25rem; }
   .hero-intro .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
   .hero-intro .hero-actions .btn { width: 100%; }
