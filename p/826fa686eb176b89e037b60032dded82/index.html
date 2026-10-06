@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Narrows Digital — Client Site Launch Checklist</title>
+<style>
+  :root {
+    --ink: #1a2332;
+    --muted: #5a6577;
+    --line: #dce3ee;
+    --bg: #f7f9fc;
+    --card: #fff;
+    --accent: #1f6feb;
+    --ok: #0f7b4c;
+    --warn: #9a6700;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.45;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 48px; }
+  header {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+  }
+  h1 { margin: 0 0 6px; font-size: 1.45rem; }
+  .sub { color: var(--muted); font-size: 0.95rem; margin: 0; }
+  .meta { margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 20px 8px;
+    margin-bottom: 14px;
+  }
+  h2 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  h2 .n {
+    display: inline-flex;
+    width: 1.5rem; height: 1.5rem;
+    border-radius: 999px;
+    background: #e8f0fe;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  p.blurb { margin: 0 0 12px; color: var(--muted); font-size: 0.92rem; }
+  ul { list-style: none; padding: 0; margin: 0 0 10px; }
+  li {
+    display: grid;
+    grid-template-columns: 1.15rem 1fr;
+    gap: 10px;
+    padding: 8px 0;
+    border-top: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+  li:first-of-type { border-top: none; }
+  li input[type="checkbox"] {
+    width: 1.05rem; height: 1.05rem;
+    margin-top: 0.2rem;
+    accent-color: var(--accent);
+  }
+  .why { display: block; color: var(--muted); font-size: 0.82rem; margin-top: 2px; }
+  .callout {
+    background: #fff8e8;
+    border: 1px solid #f0d9a0;
+    color: #5c4a12;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.88rem;
+    margin: 4px 0 12px;
+  }
+  .callout strong { color: var(--warn); }
+  footer {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+  }
+  @media print {
+    body { background: #fff; }
+    .wrap { padding: 0; max-width: none; }
+    section, header { break-inside: avoid; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Client site launch checklist</h1>
+    <p class="sub">Use this when a Narrows demo is ready to become the client's real website. Plain-English version for someone who doesn't build websites day to day.</p>
+    <p class="meta">Narrows Digital · reusable for every client · fill in blanks before go-live</p>
+  </header>
+
+  <section>
+    <h2><span class="n">0</span> Client snapshot</h2>
+    <p class="blurb">Fill this in once so nothing depends on memory.</p>
+    <ul>
+      <li><input type="checkbox"><span>Practice / business name: ______________________________</span></li>
+      <li><input type="checkbox"><span>Domain (web address): ______________________________</span></li>
+      <li><input type="checkbox"><span>Where the domain is registered (e.g. Network Solutions, GoDaddy): ________________</span></li>
+      <li><input type="checkbox"><span>Who has login access to the domain account: ________________</span></li>
+      <li><input type="checkbox"><span>Do they use email at this domain (@theirbusiness.com)? ☐ Yes ☐ No ☐ Not sure</span></li>
+      <li><input type="checkbox"><span>Demo URL: ______________________________</span></li>
+      <li><input type="checkbox"><span>Launch date target: ________________</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">1</span> Domain (the address)</h2>
+    <p class="blurb">The domain is rented yearly. It should stay in the practice's name, not yours.</p>
+    <ul>
+      <li><input type="checkbox"><span>Confirm the practice owns the domain (and it isn't about to expire)<span class="why">Stadium already owns theirs through 2035 — still confirm login access.</span></span></li>
+      <li><input type="checkbox"><span>Get into the registrar account (they log in, or you get temporary access)<span class="why">This is often the slowest step for small offices.</span></span></li>
+      <li><input type="checkbox"><span>Write down where renewals are billed and who gets the renewal emails</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">2</span> Hosting (where the site lives)</h2>
+    <p class="blurb">Hosting is a computer that stays online and serves the site files. The demo host is not the client's permanent home.</p>
+    <ul>
+      <li><input type="checkbox"><span>Pick a host (Netlify, Cloudflare Pages, GitHub Pages, or similar — fine for simple sites)</span></li>
+      <li><input type="checkbox"><span>Create the hosting account in the client's name (or yours if you're managing it under a clear agreement)</span></li>
+      <li><input type="checkbox"><span>Upload / publish the approved site files to that host</span></li>
+      <li><input type="checkbox"><span>Store login credentials somewhere the client can recover them later</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">3</span> DNS (point the address at the new host)</h2>
+    <p class="blurb">DNS is the internet's phone book. Changing it is what makes stadiumdentalhealth.com show the new site.</p>
+    <div class="callout"><strong>Watch out:</strong> If they use @theirbusiness.com email, email settings live in the same DNS area. Change only the website records. Leave MX / email records alone unless an email expert is helping.</div>
+    <ul>
+      <li><input type="checkbox"><span>Screenshot the current DNS settings before changing anything</span></li>
+      <li><input type="checkbox"><span>Update the website DNS (usually A / CNAME / ALIAS per the host's instructions)</span></li>
+      <li><input type="checkbox"><span>Confirm MX / email records were not touched (if they use domain email)</span></li>
+      <li><input type="checkbox"><span>Wait for DNS to settle (minutes to a few hours; sometimes up to 24–48)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">4</span> HTTPS (the padlock)</h2>
+    <p class="blurb">Browsers expect a secure connection. Most modern hosts turn this on for free.</p>
+    <ul>
+      <li><input type="checkbox"><span>HTTPS / SSL is active on the live domain (padlock shows, no security warning)</span></li>
+      <li><input type="checkbox"><span>http:// automatically redirects to https://</span></li>
+      <li><input type="checkbox"><span>www and non-www both work and land on the same site</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">5</span> Content that must be real</h2>
+    <p class="blurb">A demo can be approximate. A live site cannot.</p>
+    <ul>
+      <li><input type="checkbox"><span>Practice name, address, phone, hours — exact and approved</span></li>
+      <li><input type="checkbox"><span>Doctors / team — correct names and photos (fix demo gaps before launch)</span></li>
+      <li><input type="checkbox"><span>Services, insurance, and any claims — approved by the office</span></li>
+      <li><input type="checkbox"><span>Photos you have permission to use (no stock that looks fake; no stolen images)</span></li>
+      <li><input type="checkbox"><span>Client signed off on the final copy ("this is ready to go live")</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">6</span> Booking &amp; contact</h2>
+    <p class="blurb">Forms have to deliver somewhere. Patients may type personal details, so keep forms simple or use a dental scheduling tool.</p>
+    <ul>
+      <li><input type="checkbox"><span>Decide: phone-only, email form, or real online booking</span></li>
+      <li><input type="checkbox"><span>If a form: test that submissions arrive in the right inbox</span></li>
+      <li><input type="checkbox"><span>If online booking: connect their scheduling product and test a fake appointment</span></li>
+      <li><input type="checkbox"><span>Keep health details out of simple web forms (name, phone, preferred time is enough)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">7</span> Legal &amp; trust basics</h2>
+    <ul>
+      <li><input type="checkbox"><span>Privacy policy page (even a short one)</span></li>
+      <li><input type="checkbox"><span>Accessibility statement / basic accessible markup (good contrast, readable text, alt text)</span></li>
+      <li><input type="checkbox"><span>Footer copyright / business name correct</span></li>
+      <li><input type="checkbox"><span>No fake reviews, rankings, or HIPAA claims you can't support</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">8</span> Google &amp; discovery</h2>
+    <ul>
+      <li><input type="checkbox"><span>Update Google Business Profile website URL to the live domain</span></li>
+      <li><input type="checkbox"><span>Hours, phone, and address on Google match the site</span></li>
+      <li><input type="checkbox"><span>Optional: set up basic analytics (only if the client wants it and privacy notice covers it)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">9</span> Ownership &amp; business agreement</h2>
+    <p class="blurb">Decide this before flip day so nobody is stuck later.</p>
+    <ul>
+      <li><input type="checkbox"><span>Domain stays in the client's name</span></li>
+      <li><input type="checkbox"><span>Hosting: client-owned vs Narrows-managed (written down)</span></li>
+      <li><input type="checkbox"><span>Who can edit the site after launch</span></li>
+      <li><input type="checkbox"><span>Price for build / launch / monthly care (ties to your Narrows pricing)</span></li>
+      <li><input type="checkbox"><span>What happens if they leave (export of files + how to point DNS elsewhere)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">10</span> Go-live day smoke test</h2>
+    <p class="blurb">Do this on your phone and a computer, on Wi‑Fi and cellular if you can.</p>
+    <ul>
+      <li><input type="checkbox"><span>Homepage loads on phone and desktop</span></li>
+      <li><input type="checkbox"><span>Padlock is good; no certificate warnings</span></li>
+      <li><input type="checkbox"><span>Main menu links work</span></li>
+      <li><input type="checkbox"><span>Contact / book button works</span></li>
+      <li><input type="checkbox"><span>Phone number is tappable on mobile</span></li>
+      <li><input type="checkbox"><span>Request a friend outside the office to open the URL once</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">11</span> After launch (first week)</h2>
+    <ul>
+      <li><input type="checkbox"><span>Watch for "site down" or email-broken reports for 48 hours</span></li>
+      <li><input type="checkbox"><span>Save a backup of the live files</span></li>
+      <li><input type="checkbox"><span>Calendar a domain renewal reminder (yearly)</span></li>
+      <li><input type="checkbox"><span>Optional: redirect any important old pages people still bookmark</span></li>
+      <li><input type="checkbox"><span>Send the client a short "you're live" note with the logins and who to call for edits</span></li>
+    </ul>
+  </section>
+
+  <footer>Narrows Digital · Client Site Launch Checklist · keep a copy with each project</footer>
+</div>
+</body>
+</html>
