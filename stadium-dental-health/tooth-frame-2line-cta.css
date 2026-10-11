@@ -1,0 +1,37 @@
+/* Stadium Dental Health, option B (tooth frame), 2-line h1 + hero CTA. PHONE ONLY (<=700px). Mockup, 2026-10-04.
+   Loaded last, after tooth-frame-2line.css. Desktop (>700px) is unchanged: the hero CTA is hidden there and
+   the band keeps its Request button. On phones the one Request button sits in the hero, under the tooth. */
+
+.tooth-hero__cta { display: none; }                       /* desktop: unchanged */
+
+@media (max-width: 700px) {
+  /* Hero order: name, Family Dentistry, rule, tooth, Request appointment (the CTA is the grid's 3rd item) */
+  .tooth-hero { padding: 1.25rem 0 1.75rem; }
+  .tooth-hero__grid { gap: 1.5rem; }
+  .tooth-hero__kicker { margin-top: .7rem; }
+  .tooth-hero__rule { margin-top: .6rem; }
+  .tooth-hero__cta { display: block; margin-top: -.25rem; }   /* 1.5rem grid gap - .25rem = 20px tooth-to-button */
+  .tooth-hero__cta .btn {
+    display: flex;
+    width: 100%;
+    min-height: 3.25rem;                                 /* 52px tap target */
+    font-size: 1.05rem;
+  }
+
+  /* Tooth sized by viewport height so it and the CTA under it fit above the fold; never stretched (aspect-ratio 100/105 + cover) */
+  .tooth-frame {
+    width: min(80vw, 34vh);                              /* fallback for browsers without svh */
+    width: min(80vw, 34svh);                             /* small viewport height: safe with browser chrome showing */
+    max-width: 300px;
+  }
+
+  /* Band: the Request button now lives in the hero (one copy only); keep Call, the consult link and the caption */
+  .hero-intro .hero-intro__request { display: none; }
+}
+
+/* Small phones: slimmer chrome so the hero gets the height (phone only) */
+@media (max-width: 480px) {
+  .site-header { --header-h: 56px; }                     /* was 70px; Menu button size unchanged (42px) */
+  .topbar { padding: .35rem 0; font-size: .75rem; }
+  .topbar .container { flex-wrap: nowrap; gap: .5rem; white-space: nowrap; }
+}

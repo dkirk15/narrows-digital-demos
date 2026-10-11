@@ -1,0 +1,102 @@
+/* Stadium Dental Health — hero option B: art inside a tooth-outline frame (mockup, 2026-10-04)
+   Loaded LAST, after stadium.css + stadium-overlay.css (both unchanged). Stadium tokens only:
+   Barlow Condensed 700 navy-ink #0c1624, Source Sans 3, cream #f5e9cf, brick var(--brick) #b43a2f. */
+
+.tooth-hero {
+  background: #f5e9cf;                       /* the art's own paper cream, so the mask edge melts into the page */
+  color: #0c1624;
+  padding: clamp(2rem, 4vw, 3.5rem) 0 clamp(2.25rem, 4.5vw, 3.75rem);
+  overflow: hidden;
+}
+.tooth-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: 2rem clamp(2rem, 5vw, 4.5rem);
+}
+
+/* ---- Left: the name on plain cream ---- */
+.tooth-hero .tooth-hero__title {
+  margin: 0;
+  font-family: var(--font-display);          /* Barlow Condensed */
+  font-weight: 700;
+  font-size: clamp(3rem, 6.2vw, 5.75rem);
+  line-height: .9;
+  letter-spacing: .005em;
+  color: #0c1624;
+  text-wrap: nowrap;
+}
+.tooth-hero__title span { display: block; }
+.tooth-hero__kicker {
+  margin: 1.1rem 0 0;
+  font-family: var(--font);                  /* Source Sans 3 */
+  font-weight: 700;
+  font-size: .95rem;
+  line-height: 1.2;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--brick);                       /* #b43a2f: 4.7:1 on #f5e9cf */
+}
+.tooth-hero__rule {
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: .85rem;
+  background: var(--brick);
+}
+
+/* ---- Right: the live illustrated art clipped to a molar silhouette ---- */
+.tooth-frame {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 640px;
+  justify-self: end;
+  aspect-ratio: 100 / 105;                   /* = the mask viewBox, so the tooth is never stretched */
+}
+.tooth-frame__art {
+  position: absolute;
+  inset: 3.5%;                               /* soft cream margin between the art and the hairline */
+  -webkit-mask: url(assets/tooth-mask.svg) center / 100% 100% no-repeat;
+          mask: url(assets/tooth-mask.svg) center / 100% 100% no-repeat;
+  background: #f5e9cf;
+}
+.tooth-frame__art img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;                         /* no stretching: the 16:9 art is cropped, not squeezed */
+  object-position: 84% 0%;                   /* Stadium High + Rainier + dome in the crown */
+  transform: scale(var(--tooth-zoom, 1.12));
+  transform-origin: 72% 38%;
+}
+.tooth-frame__line {                         /* brick hairline, offset 3.5% outside the art edge */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.tooth-frame__line path {
+  fill: none;
+  stroke: var(--brick);
+  stroke-width: 1.25px;
+  stroke-linejoin: round;
+  opacity: .85;
+}
+
+/* ---- Tablet: keep two columns but give the name more room ---- */
+@media (max-width: 1023px) {
+  .tooth-hero__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+
+/* ---- Phone (<=700): name on top, tooth centered below at ~80% width ---- */
+@media (max-width: 700px) {
+  .tooth-hero { padding: 1.5rem 0 2rem; }
+  .tooth-hero__grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .tooth-hero__copy { padding-inline: .25rem; }
+  .tooth-hero .tooth-hero__title { font-size: clamp(2.6rem, 13vw, 3.4rem); }
+  .tooth-hero__kicker { font-size: .85rem; margin-top: .9rem; }
+  .tooth-frame { width: 80%; justify-self: center; }
+}

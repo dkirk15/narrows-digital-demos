@@ -1,0 +1,13 @@
+/* Stadium Dental Health, hero option B (tooth frame): 2-line h1 "Stadium Dental" / "Health Center" (mockup, 2026-10-04).
+   Loaded after tooth-frame.css. One h1; each line is a nowrap span so the two words never split.
+   Sizes = the largest that keeps the title block >=32px from the tooth outline (and inside the gutter),
+   measured per width with maxsize.py, minus ~1-3px of margin. */
+.tooth-hero__title .h1-line { display: block; white-space: nowrap; }
+.tooth-hero__title .h1-word { display: inline; }          /* tooth-frame.css made every span a block */
+.tooth-hero .tooth-hero__title {
+  font-size: clamp(3rem, 8.4vw, 6rem);                    /* 86px at 1024, 96px from 1143 up (4-line was 92px max) */
+  line-height: .92;
+}
+@media (max-width: 700px) {                                /* stacked: name on top, tooth below */
+  .tooth-hero .tooth-hero__title { font-size: clamp(2.5rem, 15.5vw, 4.5rem); }   /* 50px at 320, 58px at 375 */
+}
