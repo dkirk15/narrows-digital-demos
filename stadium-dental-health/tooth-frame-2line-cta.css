@@ -32,6 +32,6 @@
 /* Small phones: slimmer chrome so the hero gets the height (phone only) */
 @media (max-width: 480px) {
   .site-header { --header-h: 56px; }                     /* was 70px; Menu button size unchanged (42px) */
-  .topbar { padding: .35rem 0; font-size: .75rem; }
-  .topbar .container { flex-wrap: nowrap; gap: .5rem; white-space: nowrap; }
+  .topbar { padding: .28rem 0; font-size: .75rem; line-height: 1.25; }
+  .topbar .container { flex-wrap: wrap; gap: .1rem .75rem; white-space: normal; }
 }

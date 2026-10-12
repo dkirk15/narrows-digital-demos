@@ -7,7 +7,7 @@
 
 /* Inner pages: plain text wordmark at the left of the header (FM-STADIUM-INNER-NAME-1) */
 .site-wordmark {
-  margin-right: auto;                 /* pushes nav/Menu right; home has no wordmark so flex-end still applies */
+  margin-right: auto;                 /* pushes nav/Menu right */
   font-family: var(--font-display);   /* Barlow Condensed */
   font-weight: 700;
   font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
@@ -16,6 +16,7 @@
   color: #0c1624;
   text-decoration: none;
   min-width: 0;
+  white-space: nowrap;
 }
 .site-wordmark:hover { color: #0c1624; text-decoration: underline; text-underline-offset: 4px; }
 

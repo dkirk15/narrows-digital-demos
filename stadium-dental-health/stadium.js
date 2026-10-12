@@ -8,7 +8,7 @@
     });
   }
 
-  // Optional: ?reason=smile preselects smile consultation on contact form
+  // ?reason=smile preselects Cosmetic / smile consult on the contact form
   try {
     var params = new URLSearchParams(window.location.search);
     var reason = params.get("reason");
@@ -30,4 +30,29 @@
       form.reset();
     });
   });
+
+  // Phone bar stays hidden on the home hero until the Request button scrolls away.
+  var bar = document.querySelector("[data-sticky-actions]");
+  var heroBtn = document.querySelector(".tooth-hero__cta .btn");
+  if (bar && heroBtn && "IntersectionObserver" in window) {
+    var mq = window.matchMedia("(max-width: 700px)");
+    var inView = true;
+    function sync() {
+      bar.classList.toggle("is-waiting", mq.matches && inView);
+    }
+    var io = new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      sync();
+    }, { threshold: 0 });
+    io.observe(heroBtn);
+    function onModeChange() {
+      var r = heroBtn.getBoundingClientRect();
+      var shown = window.getComputedStyle(heroBtn).display !== "none" && r.width > 0 && r.height > 0;
+      inView = shown && r.bottom > 0 && r.top < window.innerHeight;
+      sync();
+    }
+    if (mq.addEventListener) mq.addEventListener("change", onModeChange);
+    else if (mq.addListener) mq.addListener(onModeChange);
+    sync();
+  }
 })();

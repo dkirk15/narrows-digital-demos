@@ -1,4 +1,4 @@
-/* Stadium Dental Health, hero option B (tooth frame): 2-line h1 "Stadium Dental" / "Health Center" (mockup, 2026-10-04).
+/* Stadium Dental Health, hero option B (tooth frame): 2-line h1 "Stadium Dental" / "Health" (mockup, 2026-10-04).
    Loaded after tooth-frame.css. One h1; each line is a nowrap span so the two words never split.
    Sizes = the largest that keeps the title block >=32px from the tooth outline (and inside the gutter),
    measured per width with maxsize.py, minus ~1-3px of margin. */
