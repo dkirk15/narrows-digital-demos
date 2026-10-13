@@ -16,6 +16,8 @@
   --brick-dark: #8f2c24;
   --sky: #e8f4fb;
   --sky-ring: #7eb8d8;
+  --focus-ink: #101418;
+  --focus-light: #fffcf8;
   --radius: 4px;
   --shadow: 0 8px 28px rgba(16, 20, 24, 0.1);
 }
@@ -600,10 +602,27 @@ input, select, textarea {
   background: #fff;
   color: var(--ink);
 }
-input:focus, select:focus, textarea:focus {
-  outline: 3px solid var(--sky-ring);
-  outline-offset: 1px;
-  border-color: var(--sky-ring);
+/* Keyboard focus. Ink outline carries the 3:1; the sky halo is decoration.
+   Covers links, buttons, fields, summary, [tabindex], .btn, and the menu toggle. */
+:focus-visible {
+  outline: 2px solid var(--focus-ink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px var(--sky-ring);
+}
+/* Mouse focus keeps the browser from drawing a second ring. Does not match :focus-visible. */
+:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+/* Dark navy / charcoal / brick bands: light outline, no halo. */
+.topbar :focus-visible,
+.site-footer :focus-visible,
+.cta-band :focus-visible,
+.emergency-callout :focus-visible,
+.phone-cta :focus-visible,
+.place-hero:not(.place-hero--illustrated):not(.place-hero--title) :focus-visible {
+  outline-color: var(--focus-light);
+  box-shadow: none;
 }
 textarea { min-height: 110px; resize: vertical; }
 .form-success {
@@ -909,6 +928,7 @@ fieldset.fieldset legend {
     background: #fffbf7;
     border-top: 1px solid var(--line);
     box-shadow: 0 -8px 24px rgba(16, 20, 24, 0.12);
+    overflow: visible;
   }
   .sticky-actions .btn {
     width: 100%;
