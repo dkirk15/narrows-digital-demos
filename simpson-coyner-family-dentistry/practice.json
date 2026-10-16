@@ -1,0 +1,18 @@
+{
+  "name": "Simpson & Coyner Family Dentistry",
+  "heroName": "Simpson & Coyner Family Dentistry",
+  "phones": [
+    "2538519522"
+  ],
+  "pages": {
+    "about.html": "About | {name} Preview",
+    "contact.html": "Contact & Book | {name} Preview",
+    "index.html": "{name} | Booking Preview — Narrows Digital",
+    "services.html": "Services | {name} Preview"
+  },
+  "hero": {
+    "desktop": "assets/hero-gig-harbor-16x9-v1-wired.png",
+    "mobile": null,
+    "legacy": true
+  }
+}

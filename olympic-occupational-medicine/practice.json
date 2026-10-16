@@ -1,0 +1,24 @@
+{
+  "name": "Olympic Occupational Medicine",
+  "heroName": "Olympic Occupational Medicine",
+  "phones": [
+    "2536490430"
+  ],
+  "pages": {
+    "about.html": "About and Providers | {name}",
+    "contact.html": "Contact and Request Appointment | {name}",
+    "drug-testing.html": "Drug Testing | {name}",
+    "employers.html": "Employer Services | {name}",
+    "es.html": "Español | {name}",
+    "index.html": "{name} | Gig Harbor Preview",
+    "injured-workers.html": "Injured Workers | {name}",
+    "personal-injury.html": "Personal Injury | {name}",
+    "physical-exams.html": "Physical Exams | {name}",
+    "vaccinations.html": "Vaccinations | {name}"
+  },
+  "hero": {
+    "desktop": "assets/olympic-occupational-medicine-hero-olympic-mountains-16x9-v3.jpg",
+    "mobile": "assets/olympic-occupational-medicine-hero-olympic-mountains-4x5-v3.jpg",
+    "legacy": false
+  }
+}

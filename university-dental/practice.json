@@ -1,0 +1,19 @@
+{
+  "name": "University Dental",
+  "heroName": "University Dental",
+  "phones": [
+    "2535641501"
+  ],
+  "pages": {
+    "about.html": "About Dr. Lu | {name} — Booking Preview by Narrows Digital",
+    "contact.html": "Request appointment | {name} — Booking Preview by Narrows Digital",
+    "index.html": "Home | {name} — Booking Preview by Narrows Digital",
+    "new-patients.html": "New patients | {name} — Booking Preview by Narrows Digital",
+    "services.html": "Services | {name} — Booking Preview by Narrows Digital"
+  },
+  "hero": {
+    "desktop": "assets/hero-chambers-bay-16x9-v1.jpg",
+    "mobile": "assets/hero-chambers-bay-4x5-v1.jpg",
+    "legacy": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Down to Earth Dental",
+  "heroName": "Down to Earth Dental",
+  "phones": [
+    "2534749509",
+    "2539522400"
+  ],
+  "pages": {
+    "about.html": "About / Team | {name} Preview",
+    "contact.html": "Contact & Book | {name} Preview",
+    "index.html": "{name} | Booking Preview — Narrows Digital",
+    "services.html": "Services | {name} Preview"
+  },
+  "hero": {
+    "desktop": null,
+    "mobile": null,
+    "legacy": true,
+    "note": "shared-template hero card, no image"
+  }
+}
