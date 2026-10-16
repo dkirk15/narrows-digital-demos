@@ -1,0 +1,11 @@
+{
+  "name": "narrows-digital-demos",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check && node scripts/check.mjs",
+    "screenshots": "node scripts/screenshots.mjs screenshots"
+  },
+  "devDependencies": { "playwright": "^1.48.0" }
+}

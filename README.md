@@ -39,3 +39,9 @@ See `NOTES.md` for per-practice notes. Across the demos:
 - Shared demos: plain HTML + `shared/shared.css` + `shared/shared.js` (DM Sans / Fraunces)
 - Stadium: `stadium.css` + `stadium.js` (Barlow Condensed / Source Sans 3)
 - Simpson & Coyner: `harbor.css` + `harbor.js` (Literata / Outfit)
+
+## Working on a demo (agents)
+1. Edit facts in the demo's `practice.json` (see `docs/practice-json.md`), never in HTML by hand.
+2. `npm install` once, then `npm run build` after any change.
+3. `npm run check` must pass. It also runs on every pull request ("Demo checks") and uploads desktop + 390px phone screenshots.
+4. Hand off with `docs/handoff-done.md`. Heroes follow `docs/hero-standard.md`.

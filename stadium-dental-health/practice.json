@@ -1,0 +1,18 @@
+{
+  "name": "Stadium Dental Health Center",
+  "heroName": "Stadium Dental Health",
+  "phones": [
+    "+12533834901"
+  ],
+  "pages": {
+    "about.html": "About | {name}",
+    "contact.html": "Contact | {name}",
+    "index.html": "{name}",
+    "services.html": "Services | {name}"
+  },
+  "hero": {
+    "desktop": "assets/hero-stadium-district-16x9-v4-illustrated.png",
+    "mobile": null,
+    "legacy": true
+  }
+}

@@ -932,3 +932,6 @@ textarea::placeholder { color: var(--sound-slate); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Tagline under the hero business name (hero-title rule) */
+.place-hero__content .hero-tagline { color: #fff; text-shadow: 0 1px 10px rgba(38, 36, 64, 0.55); font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 500; line-height: 1.3; margin: 0 0 0.6rem; }
