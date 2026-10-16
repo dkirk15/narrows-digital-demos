@@ -1,0 +1,24 @@
+name: Demo checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: practice.json is stamped into every page (run `npm run build` if this fails)
+        run: node scripts/build.mjs --check
+      - name: Name in hero h1, tel links, viewport, no placeholders, mobile menu, no sideways scroll
+        run: node scripts/check.mjs
+      - name: Desktop (1280) + phone (390) screenshots of every page
+        if: always()
+        run: node scripts/screenshots.mjs screenshots --all
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: screenshots, path: screenshots/, retention-days: 30 }
