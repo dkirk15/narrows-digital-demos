@@ -1,0 +1,15 @@
+{
+  "name": "Cedar Dental Care",
+  "heroName": "Cedar Dental Care",
+  "phones": ["+12532722605"],
+  "pages": {
+    "index.html": "{name}",
+    "services.html": "Services | {name}",
+    "about.html": "About | {name}",
+    "contact.html": "Contact | {name}"
+  },
+  "hero": {
+    "desktop": "img/cedar-G-1920x1080.jpg",
+    "mobile": "img/cedar-G-1080x1350.jpg"
+  }
+}
