@@ -12,7 +12,7 @@
   font-weight: 700;
   font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
   line-height: 1.05;
-  letter-spacing: .01em;
+  letter-spacing: .005em;
   color: #0c1624;
   text-decoration: none;
   min-width: 0;
@@ -20,9 +20,12 @@
 }
 .site-wordmark:hover { color: #0c1624; text-decoration: underline; text-underline-offset: 4px; }
 
-/* Below ~331px the full wordmark, the 1rem gap, and Menu no longer share one row */
-@media (max-width: 330px) {
-  .site-wordmark { font-size: 1.15rem; }
+/* Full name shares one row with Menu. Shrink only the wordmark. */
+@media (max-width: 480px) {
+  .site-wordmark {
+    font-size: clamp(0.95rem, 0.42rem + 2.8vw, 1.2rem);
+    letter-spacing: 0;
+  }
 }
 
 /* ---- Hero: full-bleed art, name set on the open cream ---- */

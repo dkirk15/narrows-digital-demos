@@ -6,6 +6,13 @@
       var open = links.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape" && e.key !== "Esc") return;
+      if (!links.classList.contains("open")) return;
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.focus();
+    });
   }
 
   // ?reason=smile preselects Cosmetic / smile consult on the contact form
