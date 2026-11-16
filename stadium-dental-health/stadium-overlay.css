@@ -2,8 +2,10 @@
    Loaded AFTER stadium.css (unchanged). Stadium tokens only: Barlow Condensed display,
    Source Sans 3 UI, navy-ink #0c1624, brick var(--brick). "CHANGED:" = differs from stadium.css. */
 
-/* ---- Header: no brand mark, nav right-aligned ---- */
-.nav-row { justify-content: flex-end; }              /* CHANGED: was space-between (mark sat on the left) */
+/* ---- Header ----
+   Inner pages: flex-end; the wordmark's margin-right: auto pins the name left.
+   Home (.site-mark): space-between, mark left, nav or Menu right. */
+.nav-row { justify-content: flex-end; }
 
 /* Inner pages: plain text wordmark at the left of the header (FM-STADIUM-INNER-NAME-1) */
 .site-wordmark {
@@ -26,6 +28,34 @@
     font-size: clamp(0.95rem, 0.42rem + 2.8vw, 1.2rem);
     letter-spacing: 0;
   }
+}
+
+/* Home only: tooth mark on the left, nav or Menu on the right.
+   :has(.site-mark) leaves inner pages on flex-end + .site-wordmark. */
+.nav-row:has(.site-mark) { justify-content: space-between; }
+
+.site-mark {
+  position: relative; /* containing block for the visually-hidden name */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  line-height: 0;
+  color: inherit;
+  text-decoration: none;
+}
+.site-mark svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.site-mark:hover {
+  opacity: 0.84;
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 480px) {
+  .site-mark svg { width: 36px; height: 36px; }
 }
 
 /* ---- Hero: full-bleed art, name set on the open cream ---- */
@@ -180,6 +210,11 @@
   .nav-row:has(.nav-links.open) {
     column-gap: 0;
     row-gap: 0;
+  }
+  /* Open menu adds a zero-width spacer after Menu. space-between would
+     center Menu between the mark and that spacer; auto margin keeps it right. */
+  .nav-row:has(.site-mark):has(.nav-links.open) .nav-toggle {
+    margin-left: auto;
   }
   .nav-row:has(.nav-links.open)::before {
     content: "";
