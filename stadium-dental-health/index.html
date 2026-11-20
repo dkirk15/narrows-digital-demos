@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="stadium.css?v=7510db79" />
-  <link rel="stylesheet" href="stadium-overlay.css?v=c1deff8a" />
+  <link rel="stylesheet" href="stadium.css?v=02c6383a" />
+  <link rel="stylesheet" href="stadium-overlay.css?v=0fb58625" />
   <link rel="stylesheet" href="tooth-frame.css?v=deea8160" />
   <link rel="stylesheet" href="tooth-frame-2line.css?v=36230edf" />
   <link rel="stylesheet" href="tooth-frame-2line-cta.css?v=46b254ee" />
@@ -95,7 +95,7 @@
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav-cta btn btn-primary">Book</a></li>
+        <li><a href="contact.html#request" class="nav-cta btn btn-primary">Book</a></li>
       </ul>
     </div>
   </header>
@@ -120,8 +120,9 @@
           </svg>
         </figure>
         <div class="tooth-hero__cta">
-          <a class="btn btn-primary" href="contact.html">Request appointment</a>
+          <a class="btn btn-primary" href="contact.html#request">Request appointment</a>
         </div>
+        <p class="photo-credit">AI / placeholder illustration of Tacoma's Stadium District — not the practice's real office or view.</p>
       </div>
     </section>
 
@@ -133,10 +134,10 @@
         </div>
         <div class="hero-intro__actions">
           <div class="hero-actions">
-            <a class="btn btn-primary hero-intro__request" href="contact.html">Request appointment</a>
+            <a class="btn btn-primary hero-intro__request" href="contact.html#request">Request appointment</a>
             <a class="btn btn-secondary" href="tel:+12533834901">Call (253) 383-4901</a>
           </div>
-          <a class="text-link" href="contact.html?reason=smile">Free smile consultation</a>
+          <a class="text-link" href="contact.html?reason=smile#request">Free smile consultation</a>
         </div>
       </div>
     </section>
@@ -157,7 +158,7 @@
             <p>A comfortable and caring environment for the entire family.</p>
           </article>
           <article class="promise-item">
-            <h3>Pain-free dentistry</h3>
+            <h3>Every step for your comfort</h3>
             <p>We pride ourselves in taking every step possible to provide pain-free dentistry.</p>
           </article>
           <article class="promise-item">
@@ -178,7 +179,7 @@
           <li><a href="services.html#restorative">Restorative</a></li>
           <li><a href="services.html#cosmetic">Cosmetic</a></li>
           <li><a href="services.html#comfort">Comfort &amp; sedation</a></li>
-          <li><a class="chip-soft" href="contact.html?reason=smile">Free smile consultation</a></li>
+          <li><a class="chip-soft" href="contact.html?reason=smile#request">Free smile consultation</a></li>
         </ul>
       </div>
     </section>
@@ -192,10 +193,33 @@
         <ol class="steps">
           <li>Call or send a request.</li>
           <li>We confirm your time by phone.</li>
-          <li>Fill out patient forms. <a href="contact.html#forms">Patient forms</a></li>
+          <li>We'll help you get new-patient paperwork ready before your visit (<a href="contact.html#forms">patient forms info</a>).</li>
           <li>Arrive a few minutes early, bring your ID and insurance card; tour the office and meet the doctors and staff.</li>
         </ol>
         <p>We accept many dental insurance plans — call to confirm your coverage.</p>
+      </div>
+    </section>
+
+    <section class="section home-doctors">
+      <div class="container">
+        <div class="section-head">
+          <h2>Meet the doctors</h2>
+        </div>
+        <ul class="home-doctor-list">
+          <li>
+            <h3>Dr. Sarah Blondin</h3>
+            <p>Dentist</p>
+          </li>
+          <li>
+            <h3>Dr. David Kim</h3>
+            <p>Dentist</p>
+          </li>
+          <li>
+            <h3>Dr. Zachary Cook</h3>
+            <p>Dentist</p>
+          </li>
+        </ul>
+        <p class="home-doctors__link"><a class="text-link" href="about.html">About the practice and team</a></p>
       </div>
     </section>
 
@@ -214,9 +238,11 @@
             <tr><th scope="row">Sat</th><td>Closed</td></tr>
             <tr><th scope="row">Sun</th><td>Closed</td></tr>
           </table>
+          <p class="hours-note">Listed hours — call to confirm.</p>
           <p class="map-note"><a href="tel:+12533834901">(253) 383-4901</a></p>
+          <p class="map-note">Parking: call the office for parking details.</p>
         </div>
-        <div>
+        <div class="visit-map">
           <div class="map-frame">
             <iframe
               title="Map of 2 N Tacoma Ave, Tacoma WA"
@@ -225,6 +251,7 @@
               src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4553%2C47.2603%2C-122.4403%2C47.2683&amp;layer=mapnik&amp;marker=47.2643%2C-122.4478"></iframe>
           </div>
           <p class="map-note">OpenStreetMap · 2 N Tacoma Ave, Stadium District</p>
+          <p class="map-note"><a class="text-link directions-link" href="https://www.google.com/maps/search/?api=1&amp;query=2+N+Tacoma+Ave%2C+Tacoma%2C+WA+98403" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a></p>
         </div>
       </div>
     </section>
@@ -234,7 +261,7 @@
         <h2>Request an appointment</h2>
         <p>Call the office, or send a request and we will confirm your time by phone.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html">Request appointment</a>
+          <a class="btn btn-primary" href="contact.html#request">Request appointment</a>
           <a class="btn btn-secondary" href="tel:+12533834901">Call (253) 383-4901</a>
         </div>
       </div>
@@ -257,6 +284,7 @@
             <li>Sat Closed</li>
             <li>Sun Closed</li>
           </ul>
+          <p class="hours-note">Listed hours — call to confirm.</p>
         </div>
         <div>
           <h3>Explore</h3>
@@ -264,7 +292,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Request appointment</a></li>
+            <li><a href="contact.html#request">Request appointment</a></li>
             <li><a href="contact.html#forms">Patient forms</a></li>
           </ul>
         </div>
@@ -273,9 +301,9 @@
     </div>
   </footer>
   <div class="sticky-actions is-waiting" data-sticky-actions>
-    <a class="btn btn-secondary" href="tel:+12533834901">Call</a>
-    <a class="btn btn-primary" href="contact.html">Book</a>
+    <a class="btn btn-secondary" href="tel:+12533834901">Call (253) 383-4901</a>
+    <a class="btn btn-primary" href="contact.html#request">Book</a>
   </div>
-  <script src="stadium.js?v=5193f11f"></script>
+  <script src="stadium.js?v=43fcc24f"></script>
 </body>
 </html>
