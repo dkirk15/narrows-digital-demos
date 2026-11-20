@@ -5,15 +5,31 @@
     toggle.addEventListener("click", function () {
       var open = links.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("menu-open", open);
     });
     document.addEventListener("keydown", function (e) {
       if (e.key !== "Escape" && e.key !== "Esc") return;
       if (!links.classList.contains("open")) return;
       links.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
       toggle.focus();
     });
   }
+
+  // Hide the sticky bottom bar while a form field has focus so it never covers the keyboard.
+  var fieldSelector = "input, select, textarea";
+  document.addEventListener("focusin", function (e) {
+    if (e.target && e.target.matches && e.target.matches(fieldSelector)) {
+      document.body.classList.add("field-focus");
+    }
+  });
+  document.addEventListener("focusout", function (e) {
+    var next = e.relatedTarget;
+    if (!next || !next.matches || !next.matches(fieldSelector)) {
+      document.body.classList.remove("field-focus");
+    }
+  });
 
   // ?reason=smile preselects Cosmetic / smile consult on the contact form
   try {
@@ -38,24 +54,42 @@
     });
   });
 
-  // Phone bar stays hidden on the home hero until the Request button scrolls away.
+  // Phone bar stays hidden on the home hero until the active Request button scrolls away.
   var bar = document.querySelector("[data-sticky-actions]");
-  var heroBtn = document.querySelector(".tooth-hero__cta .btn");
-  if (bar && heroBtn && "IntersectionObserver" in window) {
-    var mq = window.matchMedia("(max-width: 700px)");
-    var inView = true;
+  var ctaTargets = [
+    document.querySelector(".tooth-hero__cta .btn"),
+    document.querySelector(".hero-intro__request")
+  ].filter(Boolean);
+  if (bar && ctaTargets.length && "IntersectionObserver" in window) {
+    var mq = window.matchMedia("(max-width: 767px)");
+    var visibleSet = new Set();
+    function isShownInViewport(el) {
+      var r = el.getBoundingClientRect();
+      return window.getComputedStyle(el).display !== "none" &&
+        r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < window.innerHeight;
+    }
     function sync() {
-      bar.classList.toggle("is-waiting", mq.matches && inView);
+      bar.classList.toggle("is-waiting", mq.matches && visibleSet.size > 0);
     }
     var io = new IntersectionObserver(function (entries) {
-      inView = entries[0].isIntersecting;
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && entry.boundingClientRect.width > 0 && entry.boundingClientRect.height > 0) {
+          visibleSet.add(entry.target);
+        } else {
+          visibleSet.delete(entry.target);
+        }
+      });
       sync();
     }, { threshold: 0 });
-    io.observe(heroBtn);
+    ctaTargets.forEach(function (el) {
+      if (isShownInViewport(el)) visibleSet.add(el);
+      io.observe(el);
+    });
     function onModeChange() {
-      var r = heroBtn.getBoundingClientRect();
-      var shown = window.getComputedStyle(heroBtn).display !== "none" && r.width > 0 && r.height > 0;
-      inView = shown && r.bottom > 0 && r.top < window.innerHeight;
+      visibleSet.clear();
+      ctaTargets.forEach(function (el) {
+        if (isShownInViewport(el)) visibleSet.add(el);
+      });
       sync();
     }
     if (mq.addEventListener) mq.addEventListener("change", onModeChange);

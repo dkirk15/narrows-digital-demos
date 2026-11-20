@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="stadium.css?v=7510db79" />
-  <link rel="stylesheet" href="stadium-overlay.css?v=c1deff8a" />
+  <link rel="stylesheet" href="stadium.css?v=02c6383a" />
+  <link rel="stylesheet" href="stadium-overlay.css?v=0fb58625" />
 </head>
 <body>
   <div class="topbar">
@@ -32,7 +32,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="contact.html" class="nav-cta btn btn-primary">Book</a></li>
+        <li><a href="contact.html#request" class="nav-cta btn btn-primary">Book</a></li>
       </ul>
     </div>
   </header>
@@ -60,27 +60,49 @@
           <h2>Meet the doctors</h2>
           <ul class="doctor-grid">
             <li class="doctor-card">
-              <span class="doctor-avatar" aria-hidden="true">SB</span>
+              <span class="doctor-avatar" aria-hidden="true">
+                <svg viewBox="0 0 80 80" width="80" height="80" focusable="false">
+                  <circle cx="40" cy="30" r="14" fill="currentColor" />
+                  <path d="M16 70 C18 54 28 48 40 48 C52 48 62 54 64 70 Z" fill="currentColor" />
+                </svg>
+              </span>
+              <p class="doctor-placeholder-label">Photo placeholder</p>
               <h3>Dr. Sarah Blondin</h3>
               <p>Dentist</p>
             </li>
             <li class="doctor-card">
-              <span class="doctor-avatar" aria-hidden="true">DK</span>
+              <span class="doctor-avatar" aria-hidden="true">
+                <svg viewBox="0 0 80 80" width="80" height="80" focusable="false">
+                  <circle cx="40" cy="30" r="14" fill="currentColor" />
+                  <path d="M16 70 C18 54 28 48 40 48 C52 48 62 54 64 70 Z" fill="currentColor" />
+                </svg>
+              </span>
+              <p class="doctor-placeholder-label">Photo placeholder</p>
               <h3>Dr. David Kim</h3>
               <p>Dentist</p>
             </li>
             <li class="doctor-card">
-              <span class="doctor-avatar" aria-hidden="true">ZC</span>
+              <span class="doctor-avatar" aria-hidden="true">
+                <svg viewBox="0 0 80 80" width="80" height="80" focusable="false">
+                  <circle cx="40" cy="30" r="14" fill="currentColor" />
+                  <path d="M16 70 C18 54 28 48 40 48 C52 48 62 54 64 70 Z" fill="currentColor" />
+                </svg>
+              </span>
+              <p class="doctor-placeholder-label">Photo placeholder</p>
               <h3>Dr. Zachary Cook</h3>
               <p>Dentist</p>
             </li>
           </ul>
+          <p class="doctor-grid-note">Mockup: photos are placeholders until the practice provides real team photos.</p>
           <p class="membership">ADA · WSDA · Pierce County Dental Association</p>
         </div>
 
         <div class="phone-cta">
-          <p style="margin-bottom:0.85rem;">Call the office to schedule a visit or tour the facility.</p>
-          <a class="btn btn-primary" href="tel:+12533834901">Call (253) 383-4901</a>
+          <p>Call the office to schedule a visit or tour the facility.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html#request">Request appointment</a>
+            <a class="btn btn-secondary" href="tel:+12533834901">Call (253) 383-4901</a>
+          </div>
         </div>
       </div>
     </section>
@@ -102,6 +124,7 @@
             <li>Sat Closed</li>
             <li>Sun Closed</li>
           </ul>
+          <p class="hours-note">Listed hours — call to confirm.</p>
         </div>
         <div>
           <h3>Explore</h3>
@@ -109,7 +132,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Request appointment</a></li>
+            <li><a href="contact.html#request">Request appointment</a></li>
             <li><a href="contact.html#forms">Patient forms</a></li>
           </ul>
         </div>
@@ -118,9 +141,9 @@
     </div>
   </footer>
   <div class="sticky-actions" data-sticky-actions>
-    <a class="btn btn-secondary" href="tel:+12533834901">Call</a>
-    <a class="btn btn-primary" href="contact.html">Book</a>
+    <a class="btn btn-secondary" href="tel:+12533834901">Call (253) 383-4901</a>
+    <a class="btn btn-primary" href="contact.html#request">Book</a>
   </div>
-  <script src="stadium.js?v=5193f11f"></script>
+  <script src="stadium.js?v=43fcc24f"></script>
 </body>
 </html>

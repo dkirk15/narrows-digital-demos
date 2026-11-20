@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="stadium.css?v=7510db79" />
-  <link rel="stylesheet" href="stadium-overlay.css?v=c1deff8a" />
+  <link rel="stylesheet" href="stadium.css?v=02c6383a" />
+  <link rel="stylesheet" href="stadium-overlay.css?v=0fb58625" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -85,7 +85,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav-cta btn btn-primary" aria-current="page">Book</a></li>
+        <li><a href="contact.html#request" class="nav-cta btn btn-primary" aria-current="page">Book</a></li>
       </ul>
     </div>
   </header>
@@ -94,7 +94,7 @@
     <div class="page-intro">
       <div class="container">
         <h1>Contact</h1>
-        <p>Call the office or request an appointment. A <a class="text-link" href="contact.html?reason=smile">free consultation</a> is available to learn about improving your smile.</p>
+        <p>Call the office or request an appointment. A <a class="text-link" href="contact.html?reason=smile#request">free consultation</a> is available to learn about improving your smile.</p>
       </div>
     </div>
 
@@ -116,6 +116,7 @@
             <li>
               <strong>Address</strong>
               <span>2 N Tacoma Ave, Tacoma, WA 98403</span>
+              <a class="text-link directions-link" href="https://www.google.com/maps/search/?api=1&amp;query=2+N+Tacoma+Ave%2C+Tacoma%2C+WA+98403" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
             </li>
             <li>
               <strong>Phone</strong>
@@ -132,13 +133,25 @@
                 <tr><th scope="row">Sat</th><td>Closed</td></tr>
                 <tr><th scope="row">Sun</th><td>Closed</td></tr>
               </table>
+              <p class="hours-note">Listed hours — call to confirm.</p>
             </li>
           </ul>
+          <p class="map-note">Parking: call the office for parking details.</p>
+          <div class="contact-map">
+            <div class="map-frame">
+              <iframe
+                title="Map of 2 N Tacoma Ave, Tacoma WA"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4553%2C47.2603%2C-122.4403%2C47.2683&amp;layer=mapnik&amp;marker=47.2643%2C-122.4478"></iframe>
+            </div>
+            <p class="map-note">OpenStreetMap · 2 N Tacoma Ave, Stadium District</p>
+          </div>
         </div>
 
         <div class="form-card" id="request">
           <h2>Request an appointment</h2>
-          <p>Send a request and the office will call you to confirm a time.</p>
+          <p>Preview: this demo form doesn't send anything yet. To book now, call <a href="tel:+12533834901">(253) 383-4901</a>.</p>
           <form data-booking-form>
             <div class="form-grid">
               <div>
@@ -200,7 +213,7 @@
                 <button class="btn btn-primary" type="submit">Send request</button>
               </div>
             </div>
-            <div class="form-success" data-form-success tabindex="-1" role="status">Thanks — we received your request. The office will call you to confirm.</div>
+            <div class="form-success" data-form-success tabindex="-1" role="status">Preview demo — this form doesn't send requests yet. To book with Stadium Dental Health Center, call <a href="tel:+12533834901">(253) 383-4901</a>.</div>
           </form>
         </div>
       </div>
@@ -209,7 +222,7 @@
     <section class="section" id="forms">
       <div class="container">
         <h2>Patient forms</h2>
-        <p>Patient forms — call the office and we'll help you get new-patient paperwork ready before your visit.</p>
+        <p>Call the office and we'll help you get new-patient paperwork ready before your visit.</p>
         <p><a class="btn btn-primary" href="tel:+12533834901">Call (253) 383-4901</a></p>
       </div>
     </section>
@@ -231,6 +244,7 @@
             <li>Sat Closed</li>
             <li>Sun Closed</li>
           </ul>
+          <p class="hours-note">Listed hours — call to confirm.</p>
         </div>
         <div>
           <h3>Explore</h3>
@@ -238,7 +252,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Request appointment</a></li>
+            <li><a href="contact.html#request">Request appointment</a></li>
             <li><a href="contact.html#forms">Patient forms</a></li>
           </ul>
         </div>
@@ -247,9 +261,9 @@
     </div>
   </footer>
   <div class="sticky-actions" data-sticky-actions>
-    <a class="btn btn-secondary" href="tel:+12533834901">Call</a>
+    <a class="btn btn-secondary" href="tel:+12533834901">Call (253) 383-4901</a>
     <a class="btn btn-primary" href="#request">Book</a>
   </div>
-  <script src="stadium.js?v=5193f11f"></script>
+  <script src="stadium.js?v=43fcc24f"></script>
 </body>
 </html>
