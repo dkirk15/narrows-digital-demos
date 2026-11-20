@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="stadium.css?v=02c6383a" />
-  <link rel="stylesheet" href="stadium-overlay.css?v=0fb58625" />
+  <link rel="stylesheet" href="stadium.css?v=c4af4157" />
+  <link rel="stylesheet" href="stadium-overlay.css?v=d00093b5" />
   <link rel="stylesheet" href="tooth-frame.css?v=deea8160" />
   <link rel="stylesheet" href="tooth-frame-2line.css?v=36230edf" />
   <link rel="stylesheet" href="tooth-frame-2line-cta.css?v=46b254ee" />
@@ -73,6 +73,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div class="topbar">
     <div class="container">
       <span class="topbar-name" data-practice-name>Stadium Dental Health Center</span>
@@ -100,7 +101,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="tooth-hero" aria-labelledby="hero-title">
       <div class="container tooth-hero__grid">
         <div class="tooth-hero__copy">
@@ -113,7 +114,11 @@
         </div>
         <figure class="tooth-frame">
           <div class="tooth-frame__art">
-            <img src="assets/hero-stadium-district-16x9-v4-illustrated.png?v=focus-1" alt="Ink-and-watercolor illustration of Tacoma's Stadium District: Stadium High School's towers, the Union Station dome, autumn trees along the waterfront, and Mount Rainier beyond." width="1280" height="720" />
+            <picture>
+              <source type="image/avif" srcset="assets/hero-stadium-district-16x9-v4-illustrated-640.avif?v=img1 640w, assets/hero-stadium-district-16x9-v4-illustrated-1280.avif?v=img1 1280w" sizes="(max-width: 700px) 560px, 940px" />
+              <source type="image/webp" srcset="assets/hero-stadium-district-16x9-v4-illustrated-640.webp?v=img1 640w, assets/hero-stadium-district-16x9-v4-illustrated-1280.webp?v=img1 1280w" sizes="(max-width: 700px) 560px, 940px" />
+              <img src="assets/hero-stadium-district-16x9-v4-illustrated.png?v=focus-1" alt="Ink-and-watercolor illustration of Tacoma's Stadium District: Stadium High School's towers, the Union Station dome, autumn trees along the waterfront, and Mount Rainier beyond." width="1280" height="720" fetchpriority="high" decoding="async" />
+            </picture>
           </div>
           <svg class="tooth-frame__line" viewBox="0 0 100 105" preserveAspectRatio="none" aria-hidden="true" focusable="false">
             <path d="M50 9 C43 3 31 0 21 3 C9 6 2 16 3 30 C4 44 9 54 13 63 C16 73 17 86 21 97 C23 103.5 31 103.5 33 96 C36 86 40 75 50 71.5 C60 75 64 86 67 96 C69 103.5 77 103.5 79 97 C83 86 84 73 87 63 C91 54 96 44 97 30 C98 16 91 6 79 3 C69 0 57 3 50 9 Z" vector-effect="non-scaling-stroke"/>
