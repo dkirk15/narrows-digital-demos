@@ -305,3 +305,24 @@
     text-align: center;
   }
 }
+
+.tooth-frame__art picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Desktop fold fit: keep .hero-intro__request fully visible at 1440x900 (<=884px).
+   Compound selectors beat tooth-frame.css (loaded later in index.html) without editing it. */
+@media (min-width: 1024px) {
+  section.tooth-hero {
+    padding: 2rem 0;
+  }
+  .tooth-hero .tooth-frame {
+    max-width: 480px;
+  }
+  .tooth-hero .photo-credit {
+    max-width: 480px;
+    margin-top: -1.5rem;
+  }
+}
