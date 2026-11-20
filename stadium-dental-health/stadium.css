@@ -286,13 +286,6 @@ p { margin: 0 0 1rem; color: var(--muted); }
   font-size: 1.1rem;
   max-width: 34rem;
 }
-.photo-credit {
-  margin: 0.85rem 0 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
-}
 
 /* Illustrated map-style hero (v4) — ink on cream, light/no overlay */
 .place-hero--illustrated {
@@ -324,9 +317,6 @@ p { margin: 0 0 1rem; color: var(--muted); }
 }
 .place-hero--illustrated .lead {
   color: #3a424c;
-}
-.place-hero--illustrated .photo-credit {
-  color: rgba(16, 20, 24, 0.55);
 }
 .place-hero--illustrated .btn-secondary {
   background: #fffbf7;
